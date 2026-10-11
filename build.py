@@ -54,7 +54,7 @@ T = {
   name='简体中文', title='Clairsy 晴晴 — Apple Watch 的 HRV 压力监测',
   nav=['功能','常见问题','支持','隐私','条款'],
   badge='Clairsy 晴晴 · Apple Watch 的 HRV 压力监测',
-  h1='压力，<br>像<em>天气</em>一样看得见', comp='晴晴慢慢陪着你，做最懂你的健康伙伴。', sub='读你的 Apple Watch，只和你自己比。压力与今日元气，表盘跟着刷新。',
+  h1='压力，<br>像<em>天气</em>一样看得见', comp='晴晴时刻陪伴你，做最懂你的健康伙伴。', sub='读你的 Apple Watch，只和你自己比。压力与今日元气，表盘跟着刷新。',
   lead='Clairsy 读取 Apple Watch 记录的心率变异性（HRV）和心率，和你自己的基线比较，告诉你此刻状态——真巴适、hold住、有点烦还是鸭梨大。晴晴的表情会跟着你变。所有计算都在你的 iPhone 和 Apple Watch 上完成。',
   dl1='在 App Store', dl2='下载', free='免费就能看此刻压力和元气百分比。',
   req='需要 iOS 18 或更高版本的 iPhone，并配对 Apple Watch（watchOS 11 或更高版本）。',
