@@ -258,8 +258,7 @@ def home(lang):
 <div class="dev wt" data-px="0.08"><img src="{{A}}watch{sfx}.webp" alt="Clairsy on Apple Watch" width="416" height="496"></div>
 <img class="mas" src="{{A}}qingqing.svg" alt="" width="135" height="135"></div>
 <p class="shotnote">{t['shotnote']}</p></section>
-<section id="features" class="feat"><div class="wrap"><p class="kick reveal">{t['fk']}</p><h2 class="reveal">{t['fh']}</h2></div>
-<div class="wrap sgrid"><div class="steps">{steps}</div><div class="sticky"><div class="devbox">{frames}</div><div class="dots" aria-hidden="true">{dots}</div></div></div></section>
+<section id="features" class="feat"><div class="wrap sgrid"><div class="steps">{steps}</div><div class="sticky"><div class="devbox">{frames}</div><div class="dots" aria-hidden="true">{dots}</div></div></div></section>
 <section id="qingqing" class="meet"><div class="wrap"><div class="meetcard reveal">
 <div class="meetvis"><div class="meet-stage" aria-hidden="true">{meet_faces}</div>
 <div class="moods" role="group" aria-label="{x['meet_h']}">{moods}</div></div>

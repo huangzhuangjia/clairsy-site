@@ -52,7 +52,7 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#2E9466,#3BB07A 45%,#8F
 .kick{text-align:center;color:var(--mint);font-weight:800;letter-spacing:.12em;font-size:12px;margin:0}
 h2{text-align:center;font-size:52px;line-height:1.12;letter-spacing:-.015em;font-weight:900;margin:10px 0 24px}
 .feat{background:#fff;padding:110px 0 60px}
-.sgrid{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:40px}
+.sgrid{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:0}
 .step{min-height:70vh;display:flex;flex-direction:column;justify-content:center;opacity:.25;transition:opacity .4s}.step.on{opacity:1}
 .step .n{font-weight:900;color:var(--mint);font-size:15px;letter-spacing:.1em}.step h3{font-size:40px;line-height:1.12;margin:8px 0 14px;font-weight:900}.step p{font-size:18.5px;color:var(--ink2);line-height:1.7;margin:0}
 .step .inl{display:none}
