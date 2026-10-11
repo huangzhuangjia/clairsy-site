@@ -181,3 +181,36 @@ html[lang=zh-Hans] .stat b,html[lang=zh-Hans] .stat small{word-break:keep-all}
  .meet-face{transition:none;transform:none!important;animation:none!important}
  .meet-face.on{opacity:1}.mood{transition:none;transform:none!important}
 }
+
+/* hero left-right (desktop) */
+.wx{display:block;width:88px;height:60px;margin:0 0 10px;filter:drop-shadow(0 6px 10px #2F7A5518)}
+@media (min-width:821px){
+ .hero{text-align:left;padding-bottom:40px}
+ .hgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:24px;align-items:center}
+ .hgrid h1{font-size:68px;margin:12px 0 18px}html[lang=zh-Hans] .hgrid h1{font-size:62px}
+ .hgrid .comp,.hgrid .lead{margin-left:0;margin-right:0}
+ .hgrid .cta{justify-content:flex-start}
+ .hgrid .stage{width:780px;max-width:none;margin:30px 0 0 -40px;zoom:.8}
+}
+@media (min-width:821px) and (max-width:1100px){.hgrid h1{font-size:52px}html[lang=zh-Hans] .hgrid h1{font-size:48px}.hgrid .stage{zoom:.62;transform:none}}
+@media (max-width:820px){.wx{width:72px;height:50px;margin:0 auto 8px}}
+/* features v2: scroll-linked */
+.steps{position:relative}
+.rail{position:absolute;left:-28px;top:0;bottom:0;width:2px;border-radius:2px;background:#0000000d;overflow:hidden}
+.rail i{display:block;height:100%;background:linear-gradient(180deg,var(--mint),#8FDDB5);transform-origin:top;transform:scaleY(var(--fp,0))}
+.feat.live .step{opacity:calc(.14 + .86*var(--a,1));transform:translateY(calc(var(--c,0)*-26px));transition:none}
+.feat.live .stept .n{opacity:calc(.25 + .75*var(--a,1));transform:translateY(calc(var(--c,0)*-34px)) scale(calc(.94 + .06*var(--a,1)));transform-origin:left bottom;transition:none}
+.feat.live .stept h3{transform:translateY(calc(var(--c,0)*-10px))}
+.feat.live .step:not(.on) .stept .n{opacity:calc(.25 + .75*var(--a,1))}
+.feat.live .frame{transition:none}
+@media (max-width:820px){
+ .rail{display:none}
+ .step.reveal{opacity:0;transform:translateY(28px)}.step.reveal.in{opacity:1;transform:none}
+ .step .inl{opacity:0;transform:translateY(48px) scale(.97);transition:opacity .8s cubic-bezier(.2,.7,.2,1) .15s,transform .8s cubic-bezier(.2,.7,.2,1) .15s}
+ .step.in .inl{opacity:1;transform:none}
+}
+@media (prefers-reduced-motion:reduce){
+ .step .inl,.step.reveal{opacity:1!important;transform:none!important}
+ .feat.live .step,.feat.live .stept .n,.feat.live .stept h3{transform:none!important}
+ .feat.live .frame{filter:none!important}
+}

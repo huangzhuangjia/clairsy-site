@@ -248,7 +248,8 @@ def home(lang):
     meet_faces=''.join(f'<img class="meet-face{" on" if k==0 else ""}" data-mood="{mid}" src="{{A}}moods/{mid}.png" alt="" width="220" height="220" loading="lazy">' for k,(mid,_) in enumerate(x['moods']))
     faq=''.join(f'<details{" open" if k<3 else ""}><summary><span class="ib sm">{icon(i)}</span><span class="q">{q}</span><span class="pm" aria-hidden="true"></span></summary><div class="ans"><div><p>{a}</p></div></div></details>' for k,(i,(q,a)) in enumerate(zip(FAQI,t['faq'])))
     body=f'''<main>
-<section class="hero">{CLOUDS}<div class="wrap hin">
+<section class="hero">{CLOUDS}<div class="wrap hgrid"><div class="hin">
+<svg class="wx ld" style="--d:0" viewBox="0 0 64 44" aria-hidden="true"><circle cx="40" cy="16" r="11" fill="#FFD45C"/><path d="M14 40h30a10 10 0 0 0 1-19.9A13 13 0 0 0 20.5 24 8 8 0 0 0 14 40z" fill="#fff" stroke="#E3EFE8"/></svg>
 <p class="eyebrow ld" style="--d:0">{t['badge']}</p><h1 class="ld" style="--d:1">{t['h1'].replace('<br>',' ')}</h1><p class="comp ld" style="--d:2">{t['comp']}</p><p class="lead ld" style="--d:3">{t['lead']}</p>
 <div class="cta ld" style="--d:4"><a class="appstore" href="{C['app_store_url']}"><img src="{{A}}badge-{'zh-cn' if zh else 'en-us'}.svg" alt="{t['dl1']} {t['dl2']}" height="48"></a><span class="free">{t['free']}</span></div>
 <p class="req ld" style="--d:5">{t['req']}</p></div>
@@ -256,9 +257,9 @@ def home(lang):
 <div class="dev p1" data-px="-0.06"><img src="{{A}}vigor{sfx}.webp" alt="" width="603" height="1311"></div>
 <div class="dev p2" data-px="0"><img src="{{A}}today-{lang}.webp" alt="Clairsy Today" width="603" height="1311"></div>
 <div class="dev wt" data-px="0.08"><img src="{{A}}watch{sfx}.webp" alt="Clairsy on Apple Watch" width="416" height="496"></div>
-<img class="mas" src="{{A}}qingqing.svg" alt="" width="135" height="135"></div>
+<img class="mas" src="{{A}}qingqing.svg" alt="" width="135" height="135"></div></div>
 <p class="shotnote">{t['shotnote']}</p></section>
-<section id="features" class="feat"><div class="wrap sgrid"><div class="steps">{steps}</div><div class="sticky"><div class="devbox">{frames}</div><div class="dots" aria-hidden="true">{dots}</div></div></div></section>
+<section id="features" class="feat"><div class="wrap sgrid"><div class="steps"><div class="rail" aria-hidden="true"><i></i></div>{steps}</div><div class="sticky"><div class="devbox">{frames}</div><div class="dots" aria-hidden="true">{dots}</div></div></div></section>
 <section id="qingqing" class="meet"><div class="wrap"><div class="meetcard reveal">
 <div class="meetvis"><div class="meet-stage" aria-hidden="true">{meet_faces}</div>
 <div class="moods" role="group" aria-label="{x['meet_h']}">{moods}</div></div>

@@ -19,6 +19,24 @@ function act(k){if(k===curStep&&steps[k]&&steps[k].classList.contains('on'))retu
  frames.forEach(function(f,i){f.classList.toggle('on',i===k)});
  dots.forEach(function(d,i){d.classList.toggle('on',i===k);d.classList.toggle('past',i<k)})}
 if(steps.length){if(io){var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)act(+e.target.dataset.step)})},{rootMargin:'-45% 0px -45% 0px'});steps.forEach(function(s){so.observe(s)})}else act(0)}
+
+// features v2: scroll-linked progress (desktop)
+var stepsBox=document.querySelector('.steps');
+function featLink(){
+ if(!featSec||!steps.length)return;
+ if(reduce||window.innerWidth<=820){featSec.classList.remove('live');frames.forEach(function(f){f.style.opacity='';f.style.transform='';f.style.filter=''});return}
+ featSec.classList.add('live');
+ var vh=window.innerHeight,best=0,bc=9,n=steps.length;
+ steps.forEach(function(s,i){var r=s.getBoundingClientRect(),c=(r.top+r.height/2-vh/2)/r.height;c=Math.max(-1,Math.min(1,c));
+  var a=1-Math.max(0,Math.min(1,(Math.abs(c)-.22)/.5));s.style.setProperty('--a',a.toFixed(3));s.style.setProperty('--c',c.toFixed(3));if(Math.abs(c)<Math.abs(bc)){bc=c;best=i}});
+ var t=-bc,u=Math.max(0,Math.min(1,(Math.abs(t)-.2)/.3)),e=u*u*(3-2*u)*.5*(t<0?-1:1);var f=Math.max(0,Math.min(n-1,best+e));
+ frames.forEach(function(fr,i){var k=i-f,ak=Math.abs(k),o=Math.max(0,1-ak*1.2);fr.style.opacity=o.toFixed(3);
+  fr.style.transform=o>0?'translate3d(0,'+(k*46).toFixed(1)+'px,0) scale('+(1-Math.min(ak,1)*.06).toFixed(3)+')':'';
+  fr.style.filter=(o>0&&o<.98)?'blur('+(ak*4).toFixed(1)+'px)':'none'});
+ if(stepsBox)stepsBox.style.setProperty('--fp',(f/(n-1)).toFixed(4));
+ act(best)}
+var fTick=false;window.addEventListener('scroll',function(){if(!fTick){fTick=true;requestAnimationFrame(function(){featLink();fTick=false})}},{passive:true});
+window.addEventListener('resize',featLink);featLink();
 // FAQ slide
 document.querySelectorAll('.faq details').forEach(function(d){var s=d.querySelector('summary');s.addEventListener('click',function(ev){if(reduce)return;ev.preventDefault();
  if(d.open){d.classList.add('closing');setTimeout(function(){d.open=false;d.classList.remove('closing')},300)}else{d.classList.add('opening');d.open=true;requestAnimationFrame(function(){requestAnimationFrame(function(){d.classList.remove('opening')})})}})});
