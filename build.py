@@ -224,8 +224,7 @@ def home(lang):
     t=T[lang]; x=X[lang]; L=LABELS[lang]; zh=lang=='zh'; sfx='' if zh else '-en'
     shots=[f'<div class="ph"><img src="{{A}}today-{lang}.webp" alt="Clairsy Today" width="603" height="1311" loading="lazy"></div>',
            f'<div class="ph"><img src="{{A}}vigor{sfx}.webp" alt="Daily Vigor" width="603" height="1311" loading="lazy"></div>',
-           (f'<div class="ph"><img src="{{A}}breath-zh.webp" alt="{x["breath_alt"]}" width="603" height="1311" loading="lazy"></div>' if zh else
-            '<div class="qq"><img src="{A}qingqing.svg" alt="" width="220" height="220" loading="lazy"></div>'),
+           f'<div class="ph"><img src="{{A}}breath-{lang}.webp" alt="{x["breath_alt"]}" width="603" height="1311" loading="lazy"></div>',
            f'<div class="wa"><img src="{{A}}watch{sfx}.webp" alt="Clairsy on Apple Watch" width="416" height="496" loading="lazy"></div>']
     steps=''.join(f'<div class="step reveal" data-step="{k}"><span class="n">0{k+1}</span><h3>{a}</h3><p>{b}</p><div class="inl">{shots[k]}</div></div>' for k,(a,b) in enumerate(t['cards']))
     frames=''.join(f'<div class="frame{" on" if k==0 else ""}" data-frame="{k}">{s}</div>' for k,s in enumerate(shots))
