@@ -16,19 +16,19 @@ These Terms supplement Apple's [Licensed Application End User License Agreement]
 
 ## 1. The service
 
-The App reads the Apple Health data you authorize (such as heart rate variability (HRV), heart rate, and sleep) and, on your device, estimates your stress level, your "Daily Vigor", and your sleep. It also offers relaxation breathing exercises, Home Screen widgets, an Apple Watch app, and complications. Some readings appear only after you have worn an Apple Watch for several days.
+The App reads the Apple Health data you authorize (such as heart rate variability (HRV), heart rate, and sleep) and, on your device, estimates your stress level, your "Daily Energy", and your sleep. It also offers relaxation breathing exercises, Home Screen widgets, an Apple Watch app, and complications. Some readings appear only after you have worn an Apple Watch for several days.
 
 ## 2. Not medical advice (important)
 
-- **The App is not a medical device. Everything it provides (including stress level, stress index, Daily Vigor, HRV interpretation, sleep score, alerts, and breathing exercises) is for general wellness and lifestyle reference only. It is not medical advice, diagnosis, treatment, or prevention, and it is no substitute for a qualified health professional.**
+- **The App is not a medical device. Everything it provides (including stress level, stress index, Daily Energy, HRV interpretation, sleep score, alerts, and breathing exercises) is for general wellness and lifestyle reference only. It is not medical advice, diagnosis, treatment, or prevention, and it is no substitute for a qualified health professional.**
 - **Do not make medical decisions based on the App. If you feel unwell or have any concern about your health, consult a doctor. In an emergency, call your local emergency number immediately.**
 - Readings may be inaccurate or delayed because of how the device is worn, sensor limits, availability of system data, and other factors.
 - Breathing exercises are for relaxation. **If you feel dizzy, short of breath, chest tightness, or any discomfort, stop immediately and breathe normally.** If you have a heart or lung condition, are pregnant, or have any other health condition, consult a doctor before practicing.
 
 ## 3. Free features and membership
 
-- **Free:** the Today page (stress level, HRV, and Daily Vigor %); sleep duration, score, sleep debt, and stages; breathing exercises; Home Screen widgets (Current Status, Daily Vigor, Today Overview); free complications; and one basic watch face.
-- **Clairsy Membership:** unlocks trends, Daily Vigor details (breakdown and all-day curve), in-depth sleep analysis, custom stress-alert frequency, member complications and watch faces, and more. **The membership page in the App describes exactly what is included.**
+- **Free:** the Today page (stress level, HRV, and Daily Energy %); sleep duration, score, sleep debt, and stages; breathing exercises; Home Screen widgets (Current Status, Daily Energy, Today Overview); free complications; and one basic watch face.
+- **Clairsy Membership:** unlocks trends, Daily Energy details (breakdown and all-day curve), in-depth sleep analysis, custom stress-alert frequency, member complications and watch faces, and more. **The membership page in the App describes exactly what is included.**
 - Membership options (**the price shown on the App Store purchase sheet applies**; reference prices: US $4.99/month, $29.99/year, $59.99 lifetime; mainland China ¥15/month, ¥98/year, ¥168 lifetime):
   1. **Monthly:** auto-renewable subscription, renews every 1 month;
   2. **Yearly:** auto-renewable subscription, renews every 1 year;

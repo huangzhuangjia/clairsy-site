@@ -30,28 +30,28 @@ Only after you grant permission in the system prompt, the App **reads (read-only
 |---|---|
 | Heart rate variability (HRV, SDNN) | Compared with your personal baseline to estimate your current stress level |
 | Recovery HRV (RMSSD; requested separately, only on OS versions that support it) | Makes stress estimates more timely |
-| Resting heart rate | Stress level and "Daily Vigor" estimates |
-| Heart rate | Stress level, overnight heart-rate chart, vigor drain estimate |
-| Sleep analysis (stages and duration) | Sleep score, sleep-stage analysis, starting point of Daily Vigor |
-| Respiratory rate (during sleep) | Recovery assessment for Daily Vigor |
-| Sleeping wrist temperature | Recovery assessment for Daily Vigor |
-| Workouts (time and duration) | Training load and vigor estimates |
+| Resting heart rate | Stress level and "Daily Energy" estimates |
+| Heart rate | Stress level, overnight heart-rate chart, energy drain estimate |
+| Sleep analysis (stages and duration) | Sleep score, sleep-stage analysis, starting point of Daily Energy |
+| Respiratory rate (during sleep) | Recovery assessment for Daily Energy |
+| Sleeping wrist temperature | Recovery assessment for Daily Energy |
+| Workouts (time and duration) | Training load and energy estimates |
 | Workout effort (Apple rating / estimated rating) | Training load estimate |
-| Step count | Activity and vigor drain estimates |
-| Active energy | Activity and vigor drain estimates |
+| Step count | Activity and energy drain estimates |
+| Active energy | Activity and energy drain estimates |
 
 The App also reads the **source device information** attached to these samples (for example, the Apple Watch model). It uses this only to show which device the data came from.
 
 **The App never writes any data to Health.** You can grant access to only some data types. Anything you don't allow is left out of the calculations, and the related features may show "not enough data".
 
-**Why sensitive data is necessary, and how it affects you:** health data is sensitive personal information. The App's core features (stress level, Daily Vigor, sleep analysis) can't work without it. All processing happens locally on your devices, and we cannot see or obtain this data.
+**Why sensitive data is necessary, and how it affects you:** health data is sensitive personal information. The App's core features (stress level, Daily Energy, sleep analysis) can't work without it. All processing happens locally on your devices, and we cannot see or obtain this data.
 
 ### 2.2 Information you create in the App (stored on your device only)
 
 - **Mood check-ins** (the feeling you choose and the time): used to calibrate stress estimates to how you actually feel.
 - **Breathing session history** (time and duration of your most recent 100 sessions): used to show your practice history and before/after changes.
 - **App settings**: appearance, stress-alert frequency, sleep-need duration, and similar preferences.
-- **Computed results and caches**: stress level, Daily Vigor, a 30-day HRV sample cache, your personal baselines, and so on. These make the App load faster and feed the Home Screen widgets and watch complications.
+- **Computed results and caches**: stress level, Daily Energy, a 30-day HRV sample cache, your personal baselines, and so on. These make the App load faster and feed the Home Screen widgets and watch complications.
 - **Membership status**: whether you have an active subscription, its expiry date, and whether you bought Lifetime, the one-time purchase (from Apple's purchase records; see 2.3).
 
 ### 2.3 Purchases (handled by Apple)
@@ -90,7 +90,7 @@ The App contains links to external websites (for example, doi.org links to the r
 
 ## 6. Automated assessment
 
-On your device, the App **automatically** compares your HRV, heart rate, and other data with your personal baseline to produce reference results such as your stress level, Daily Vigor, and sleep score. You can see how these are calculated in the App's “How it’s calculated” explanations. These results are for your own reference only. They are **not** used to make any decision that significantly affects your rights or interests, and they are not given to anyone.
+On your device, the App **automatically** compares your HRV, heart rate, and other data with your personal baseline to produce reference results such as your stress level, Daily Energy, and sleep score. You can see how these are calculated in the App's “How it’s calculated” explanations. These results are for your own reference only. They are **not** used to make any decision that significantly affects your rights or interests, and they are not given to anyone.
 
 ## 7. Health disclaimer
 
