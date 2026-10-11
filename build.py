@@ -21,7 +21,7 @@ T = {
   lead="Clairsy reads heart rate variability and heart rate from your Apple Watch, compares them with your own baseline, and tells you how you're doing right now — Chill, Steady, Tense or Stressed. Qingqing changes with you. Everything is calculated on your iPhone and Apple Watch.",
   dl1='Download on the', dl2='App Store', free='Free to start · 7-day free trial on subscriptions',
   req='Requires iPhone with iOS 18 or later and a paired Apple Watch (watchOS 11 or later).',
-  shotnote='Screenshots from the current app (demo data). The app interface is in Simplified Chinese.',
+  shotnote='Screenshots from the current app (demo data).',
   trust=[('On-device only','No servers — nothing is uploaded'),('No account','No sign-up, no login'),('No tracking','No ads, no analytics SDKs'),('Read-only Health','Clairsy never writes to Health')],
   fk='FEATURES', fh='Built around your own baseline',
   cards=[('Stress, in plain words','HRV and resting heart rate are compared with your personal baseline and turned into four easy levels — Chill, Steady, Tense, Stressed — with a stress index and 7-day average. Quick mood check-ins calibrate it to how you actually feel.'),
@@ -178,9 +178,9 @@ def home(lang):
 <div class="cta"><a class="appstore" href="{C['app_store_url']}"><img src="{{A}}badge-{'zh-cn' if lang=='zh' else 'en-us'}.svg" alt="{t['dl1']} {t['dl2']}" height="48"></a><span class="free">{t['free']}</span></div>
 <p class="req">{t['req']}</p></div>
 <div class="hvis"><div class="halo"></div>
-<div class="dev ph1"><img src="{{A}}vigor.webp" alt="" width="603" height="1311"></div>
+<div class="dev ph1"><img src="{{A}}vigor{'-en' if lang=='en' else ''}.webp" alt="" width="603" height="1311"></div>
 <div class="dev ph2"><img src="{{A}}today-{lang}.webp" alt="Clairsy Today" width="603" height="1311"></div>
-<div class="dev wt"><img src="{{A}}watch.webp" alt="Clairsy on Apple Watch" width="416" height="496"></div>
+<div class="dev wt"><img src="{{A}}watch{'-en' if lang=='en' else ''}.webp" alt="Clairsy on Apple Watch" width="416" height="496"></div>
 <img class="mas" src="{{A}}qingqing.svg" alt="" width="135" height="135"></div>
 <p class="shotnote">{t['shotnote']}</p></div>
 <div class="wrap"><div class="trust">{trust}</div></div></section>
