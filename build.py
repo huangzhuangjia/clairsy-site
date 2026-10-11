@@ -195,14 +195,14 @@ def home(lang):
 X={'en':dict(
   dark_h='Compared only to <span>you</span>.',
   dark_p='Clairsy compares your HRV (SDNN, plus RMSSD on OS versions that support it) and resting heart rate with your own personal baseline — not a population average — to estimate your current stress level.',
-  stats=[('4','levels: Chill · Steady · Tense · Stressed'),('7-day','average alongside the stress index'),('0','servers — everything is calculated on your iPhone and Apple Watch')],
+  stats=[('4',' levels','Chill · Steady · Tense · Stressed'),('7','-day average','alongside the stress index'),('0',' servers','everything is calculated on your iPhone and Apple Watch')],
   priv_h='Private by design.',
   priv_p='Clairsy only reads the Health data you allow it to read, and does all of its calculations on your iPhone and Apple Watch. We have no servers. We never upload your data to us or to anyone else, and we never use it for advertising.',
   priv_link='Read the Privacy Policy ›', breath_alt='Breathing exercise'),
  'zh':dict(
   dark_h='只和<span>你自己</span>比。',
   dark_p='Clairsy 把你的 HRV（SDNN，在支持的系统版本上还会用 RMSSD）和静息心率与你自己的个人基线——而不是人群平均值——比较，估算你此刻的压力水平。',
-  stats=[('4','档：真巴适 · hold住 · 有点烦 · 鸭梨大'),('7 日','均值，和压力指数一起看'),('0','台服务器——所有计算都在你的 iPhone 和 Apple Watch 上完成')],
+  stats=[('4',' 档','真巴适 · hold住 · 有点烦 · 鸭梨大'),('7',' 日均值','和压力指数一起看'),('0',' 台服务器','所有计算都在你的 iPhone 和 Apple Watch 上完成')],
   priv_h='隐私，从设计开始。',
   priv_p='Clairsy 只读取你授权的「健康」数据，所有计算都在你的 iPhone 和 Apple Watch 上完成。我们没有服务器，不会把你的任何数据上传给我们或任何第三方，也不会把数据用于广告。',
   priv_link='阅读隐私政策 ›', breath_alt='呼吸减压')}
@@ -219,7 +219,7 @@ def home(lang):
     frames=''.join(f'<div class="frame{" on" if k==0 else ""}" data-frame="{k}">{s}</div>' for k,s in enumerate(shots))
     dots=''.join(f'<i class="{"on" if k==0 else ""}"></i>' for k in range(4))
     tiles=''.join(f'<div class="tile reveal"><img class="ti" src="{{A}}icons/{i}.svg" alt="" aria-hidden="true"><b>{a}</b><small>{b}</small></div>' for i,(a,b) in zip(TRUSTI,t['trust']))
-    stats=''.join(f'<div class="stat reveal"><b>{n}</b><small>{d}</small></div>' for n,d in x['stats'])
+    stats=''.join(f'<div class="stat reveal"><p class="sk"><b>{n}</b><span>{u}</span></p><small>{d}</small></div>' for n,u,d in x['stats'])
     faq=''.join(f'<details{" open" if k<3 else ""}><summary><span class="ib sm">{icon(i)}</span><span class="q">{q}</span><span class="pm" aria-hidden="true"></span></summary><div class="ans"><div><p>{a}</p></div></div></details>' for k,(i,(q,a)) in enumerate(zip(FAQI,t['faq'])))
     body=f'''<main>
 <section class="hero">{CLOUDS}<div class="wrap hin">
