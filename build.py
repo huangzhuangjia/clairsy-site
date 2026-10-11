@@ -25,7 +25,7 @@ T = {
   trust=[('On-device only','No servers — nothing is uploaded'),('No account','No sign-up, no login'),('No tracking','No ads, no analytics SDKs'),('Read-only Health','Clairsy never writes to Health')],
   fk='FEATURES', fh='Built around your own baseline',
   cards=[('Stress, plain and clear','HRV and resting heart rate become four clear levels — Chill, Steady, Tense, Stressed — with a stress index and 7-day average. Quick mood check-ins calibrate it to how you actually feel.'),
-         ('5-minute HRV refresh','On Apple Watch Ultra 4 and Series 12, with Recovery HRV authorized, readings refresh about every 5 minutes and Clairsy switches to fast refresh, so “Right now” stays current. Your watch face and complications keep up as the system allows — usually within 15–30 minutes.'),
+         ('5-minute HRV refresh','On Apple Watch Ultra 4 and Series 12, with Recovery HRV authorized, samples arrive about every 5 minutes and Clairsy switches to fast refresh — you’ll see it on Today as “Fast refresh · a few minutes ago.” Watch face and complications keep up as the system allows, usually within 15–30 minutes.'),
          ('Custom alert frequency','Three stress-alert modes: Low (default) sends one gentle nudge when you move up to Stressed; Normal alerts after about 10 minutes in Tense or Stressed; Custom (Membership) reports your current status every 15 minutes to 4 hours. 15- and 30-minute intervals need a fast-refresh watch such as Series 12 or Ultra 4; on Series 11, Ultra 3 and earlier, Custom starts at 1 hour — or use Normal.'),
          ('Daily Vigor drains','Each morning Clairsy sets your Daily Vigor from recovery, sleep and training load — then stress drains it through the day, so you can see how much you have left.'),
          ('Sleep at a glance','Last night’s duration, sleep score, 7-night sleep debt and stages — deep, core, REM and awake — all free, with Qingqing suggesting a bedtime. Membership adds in-depth sleep analysis.'),
@@ -62,7 +62,7 @@ T = {
   trust=[('仅在设备上计算','没有服务器，什么都不上传'),('无需账号','不用注册，不用登录'),('不追踪','无广告，无统计分析 SDK'),('只读健康数据','Clairsy 从不写入「健康」')],
   fk='功能', fh='围绕你自己的基线',
   cards=[('压力一眼看懂','HRV 和静息心率与你的个人基线比较，一眼看出四档：真巴适、hold住、有点烦、鸭梨大，并给出压力指数和 7 日均值。随手打卡此刻感受，帮它校准到你的真实体感。'),
-         ('5分钟 HRV 极速刷新','在 Apple Watch Ultra 4 和 Series 12 上授权「恢复 HRV」后，样本最快约 5 分钟一次，Clairsy 自动进入极速刷新，「此刻」状态更及时；表盘和复杂功能也会尽快跟上（受系统后台额度限制，通常 15–30 分钟内）。'),
+         ('5分钟 HRV 极速刷新','在 Apple Watch Ultra 4 和 Series 12 上授权「恢复 HRV」后，样本最快约 5 分钟一次，Clairsy 自动进入极速刷新——今日页会显示「极速刷新 · N 分钟前」。表盘和复杂功能也会尽快跟上（受系统后台额度限制，通常 15–30 分钟内）。'),
          ('自定义通知频率','压力提醒有三档：低频（默认）只在状态升入「鸭梨大」时轻轻提醒一次；普通在「有点烦」或「鸭梨大」持续约 10 分钟后提醒；自定义频率（会员）按 15 分钟到 4 小时的间隔播报此刻状态。15 / 30 分钟需要 Series 12、Ultra 4 等支持极速刷新的手表；Series 11、Ultra 3 及更早机型自定义从 1 小时起，或选普通档。'),
          ('今日元气会耗尽','每天早上，Clairsy 根据恢复、睡眠和训练负荷定下今日元气；一天里压力会慢慢耗尽它，还剩多少一眼就知道。'),
          ('睡眠一眼看懂','昨夜睡眠时长、睡眠得分、近 7 晚睡眠负债，以及深睡、浅睡、REM、清醒分期，全部免费；晴晴还会建议今晚几点前睡。会员解锁深度睡眠分析。'),
@@ -212,7 +212,7 @@ X={'en':dict(
   moods=[('chill','Chill'),('steady','Steady'),('tense','Tense'),('stressed','Stressed')],
   priv_h='Private by design.',
   priv_p='Clairsy only reads the Health data you allow it to read, and does all of its calculations on your iPhone and Apple Watch. We have no servers. We never upload your data to us or to anyone else, and we never use it for advertising.',
-  priv_link='Read the Privacy Policy ›', breath_alt='Breathing exercise', sleep_alt='Sleep', trends_alt='Trends', hrv_alt='Fast refresh is on', alerts_alt='Stress alerts'),
+  priv_link='Read the Privacy Policy ›', breath_alt='Breathing exercise', sleep_alt='Sleep', trends_alt='Trends', hrv_alt='Today · Fast refresh', alerts_alt='Stress alerts'),
  'zh':dict(
   dark_h='只和<span>你自己</span>比。',
   dark_p='',
@@ -225,7 +225,7 @@ X={'en':dict(
   moods=[('chill','真巴适'),('steady','hold住'),('tense','有点烦'),('stressed','鸭梨大')],
   priv_h='隐私，从设计开始。',
   priv_p='Clairsy 只读取你授权的「健康」数据，所有计算都在你的 iPhone 和 Apple Watch 上完成。我们没有服务器，不会把你的任何数据上传给我们或任何第三方，也不会把数据用于广告。',
-  priv_link='阅读隐私政策 ›', breath_alt='呼吸减压', sleep_alt='睡眠', trends_alt='趋势', hrv_alt='极速刷新已开启', alerts_alt='压力提醒')}
+  priv_link='阅读隐私政策 ›', breath_alt='呼吸减压', sleep_alt='睡眠', trends_alt='趋势', hrv_alt='今日 · 极速刷新', alerts_alt='压力提醒')}
 CLOUDS='<div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div>'
 
 def home(lang):
