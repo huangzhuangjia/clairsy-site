@@ -253,12 +253,12 @@ def home(lang):
 <p class="eyebrow ld" style="--d:0">{t['badge']}</p><h1 class="ld" style="--d:1">{t['h1'].replace('<br>',' ')}</h1><p class="comp ld" style="--d:2">{t['comp']}</p><p class="lead ld" style="--d:3">{t['lead']}</p>
 <div class="cta ld" style="--d:4"><a class="appstore" href="{C['app_store_url']}"><img src="{{A}}badge-{'zh-cn' if zh else 'en-us'}.svg" alt="{t['dl1']} {t['dl2']}" height="48"></a><span class="free">{t['free']}</span></div>
 <p class="req ld" style="--d:5">{t['req']}</p></div>
-<div class="stage ld" style="--d:5"><div class="glow"></div>
+<div class="hvis"><div class="stage ld" style="--d:5"><div class="glow"></div>
 <div class="dev p1" data-px="-0.06"><img src="{{A}}vigor{sfx}.webp" alt="" width="603" height="1311"></div>
 <div class="dev p2" data-px="0"><img src="{{A}}today-{lang}.webp" alt="Clairsy Today" width="603" height="1311"></div>
 <div class="dev wt" data-px="0.08"><img src="{{A}}watch{sfx}.webp" alt="Clairsy on Apple Watch" width="416" height="496"></div>
-<img class="mas" src="{{A}}qingqing.svg" alt="" width="135" height="135"></div></div>
-<p class="shotnote">{t['shotnote']}</p></section>
+<img class="mas" src="{{A}}qingqing.svg" alt="" width="135" height="135"></div>
+<p class="shotnote">{t['shotnote']}</p></div></div></section>
 <section id="features" class="feat"><div class="wrap sgrid"><div class="steps"><div class="rail" aria-hidden="true"><i></i></div>{steps}</div><div class="sticky"><div class="devbox">{frames}</div><div class="dots" aria-hidden="true">{dots}</div></div></div></section>
 <section id="qingqing" class="meet"><div class="wrap"><div class="meetcard reveal">
 <div class="meetvis"><div class="meet-stage" aria-hidden="true">{meet_faces}</div>
