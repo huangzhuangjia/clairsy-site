@@ -233,8 +233,8 @@ def home(lang):
     tiles=''.join(f'<div class="tile reveal"><img class="ti" src="{{A}}icons/{i}.svg" alt="" aria-hidden="true"><b>{a}</b><small>{b}</small></div>' for i,(a,b) in zip(TRUSTI,t['trust']))
     stats=''.join(f'<div class="stat reveal"><b>{t_}</b><small>{d}</small></div>' for t_,d in x['points'])
     dark_lede=(f'<p class="lede reveal">{x["dark_p"]}</p>' if x.get('dark_p') else '')
-    moods=''.join(f'<button type="button" class="mood{" on" if k==0 else ""}" data-mood="{mid}" aria-pressed="{"true" if k==0 else "false"}"><img src="{{A}}faces/{mid}.svg" alt="" width="56" height="56" loading="lazy"><span>{lab}</span></button>' for k,(mid,lab) in enumerate(x['moods']))
-    meet_faces=''.join(f'<img class="meet-face{" on" if k==0 else ""}" data-mood="{mid}" src="{{A}}qingqing-{mid}.svg" alt="" width="220" height="220" loading="lazy">' for k,(mid,_) in enumerate(x['moods']))
+    moods=''.join(f'<button type="button" class="mood{" on" if k==0 else ""}" data-mood="{mid}" aria-pressed="{"true" if k==0 else "false"}"><img src="{{A}}moods/{mid}.png" alt="" width="56" height="56" loading="lazy"><span>{lab}</span></button>' for k,(mid,lab) in enumerate(x['moods']))
+    meet_faces=''.join(f'<img class="meet-face{" on" if k==0 else ""}" data-mood="{mid}" src="{{A}}moods/{mid}.png" alt="" width="220" height="220" loading="lazy">' for k,(mid,_) in enumerate(x['moods']))
     faq=''.join(f'<details{" open" if k<3 else ""}><summary><span class="ib sm">{icon(i)}</span><span class="q">{q}</span><span class="pm" aria-hidden="true"></span></summary><div class="ans"><div><p>{a}</p></div></div></details>' for k,(i,(q,a)) in enumerate(zip(FAQI,t['faq'])))
     body=f'''<main>
 <section class="hero">{CLOUDS}<div class="wrap hin">

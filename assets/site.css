@@ -149,12 +149,12 @@ html[lang=zh-Hans] .stat b,html[lang=zh-Hans] .stat small{word-break:keep-all}
 .meet{background:#fff;padding:40px 0 100px}
 .meetcard{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;border-radius:36px;padding:52px 56px;background:linear-gradient(135deg,#DFF3E8,#F4FBF7 55%,#fff);border:1px solid #E3F1E8}
 .meetvis{display:flex;flex-direction:column;align-items:center;gap:22px}
-.meet-stage{position:relative;width:220px;height:220px;filter:drop-shadow(0 12px 18px #2F7A5530)}
+.meet-stage{position:relative;width:220px;height:220px;filter:drop-shadow(0 10px 16px #2F7A5528)}
 .meet-face{position:absolute;inset:0;width:100%;height:100%;opacity:0;transform:translateY(6px) scale(.96);transition:opacity .55s ease,transform .55s ease;pointer-events:none}
 .meet-face.on{opacity:1;transform:none;animation:bob 4s ease-in-out infinite}
 .moods{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:340px}
 .mood{display:flex;flex-direction:column;align-items:center;gap:6px;border:1px solid transparent;background:#fff;border-radius:18px;padding:10px 12px 8px;cursor:pointer;min-width:72px;transition:border-color .25s,box-shadow .25s,transform .25s;font:inherit;color:inherit}
-.mood img{width:48px;height:48px;display:block;border-radius:50%}
+.mood img{width:48px;height:48px;display:block;object-fit:contain}
 .mood span{font-size:12.5px;font-weight:800;color:var(--ink2);letter-spacing:.01em}
 .mood:hover,.mood.on{border-color:#B7E3C9;box-shadow:0 6px 16px #2F7A5518;transform:translateY(-2px)}
 .mood.on span{color:var(--mintd)}
