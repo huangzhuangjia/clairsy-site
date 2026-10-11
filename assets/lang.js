@@ -24,4 +24,18 @@ function onScroll(){var y=window.scrollY;if(top)top.classList.toggle('scrolled',
  if(!reduce&&window.innerWidth>820){px.forEach(function(e){var f=+e.dataset.px,r=e.classList.contains('p1')?Math.min(4,y/120):0;e.style.transform='translateY('+(y*f).toFixed(1)+'px)'+(e.classList.contains('p1')?' rotate('+(-7+r).toFixed(2)+'deg)':'')})}
  ticking=false}
 window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(onScroll)}},{passive:true});onScroll();
+
+// Meet Qingqing — expression cycle (pause on hover/focus; static if reduced motion)
+var meet=document.querySelector('.meetcard');
+if(meet){
+ var faces=meet.querySelectorAll('.meet-face'), moodBtns=meet.querySelectorAll('.mood'), mi=0, timer=null, paused=false;
+ function showMood(i){mi=i;faces.forEach(function(f,k){f.classList.toggle('on',k===i)});moodBtns.forEach(function(b,k){var on=k===i;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on?'true':'false')})}
+ function next(){if(!paused)showMood((mi+1)%faces.length)}
+ function start(){if(reduce||timer||faces.length<2)return;timer=setInterval(next,2800)}
+ function stop(){if(timer){clearInterval(timer);timer=null}}
+ moodBtns.forEach(function(b,i){b.addEventListener('click',function(){showMood(i);paused=true;stop()});b.addEventListener('mouseenter',function(){showMood(i);paused=true;stop()});b.addEventListener('focus',function(){showMood(i);paused=true;stop()})});
+ meet.addEventListener('mouseleave',function(){paused=false;start()});
+ if(!reduce){if(io){var mo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)start();else stop()})},{threshold:.25});mo.observe(meet)}else start()}
+}
+
 })();

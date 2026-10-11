@@ -199,6 +199,9 @@ X={'en':dict(
           ('Live on your wrist','Watch face and complications refresh when a new sample lands.'),
           ('Never leaves your device','No servers, no account, no tracking.'),
           ('On your wrist','Check-ins help it learn you; a soft nudge when stress rises.')],
+  meet_h='Meet Qingqing',
+  meet_p='Qingqing is the little companion on your wrist. When your stress level changes, so does its expression. When you take a breather, it breathes with you. After check-ins, it learns you a little better. Not a coach — a companion.',
+  moods=[('chill','Chill'),('steady','Steady'),('tense','Tense'),('stressed','Stressed')],
   priv_h='Private by design.',
   priv_p='Clairsy only reads the Health data you allow it to read, and does all of its calculations on your iPhone and Apple Watch. We have no servers. We never upload your data to us or to anyone else, and we never use it for advertising.',
   priv_link='Read the Privacy Policy ›', breath_alt='Breathing exercise'),
@@ -209,6 +212,9 @@ X={'en':dict(
           ('表盘跟着刷新','新样本一到，表盘和复杂功能跟着更新。'),
           ('数据不出机','无服务器、无账号、无追踪。'),
           ('晴晴在你手腕上','打卡后更懂你，压力大时轻轻喊你缓一口气。')],
+  meet_h='认识晴晴',
+  meet_p='晴晴是你手腕上的小伙伴。压力档位变了，它的表情跟着变；缓一口气时，它陪你一起呼吸；打卡之后，它会慢慢更懂你。不是监督，是陪伴。',
+  moods=[('chill','真巴适'),('steady','hold住'),('tense','有点烦'),('stressed','鸭梨大')],
   priv_h='隐私，从设计开始。',
   priv_p='Clairsy 只读取你授权的「健康」数据，所有计算都在你的 iPhone 和 Apple Watch 上完成。我们没有服务器，不会把你的任何数据上传给我们或任何第三方，也不会把数据用于广告。',
   priv_link='阅读隐私政策 ›', breath_alt='呼吸减压')}
@@ -227,6 +233,8 @@ def home(lang):
     tiles=''.join(f'<div class="tile reveal"><img class="ti" src="{{A}}icons/{i}.svg" alt="" aria-hidden="true"><b>{a}</b><small>{b}</small></div>' for i,(a,b) in zip(TRUSTI,t['trust']))
     stats=''.join(f'<div class="stat reveal"><b>{t_}</b><small>{d}</small></div>' for t_,d in x['points'])
     dark_lede=(f'<p class="lede reveal">{x["dark_p"]}</p>' if x.get('dark_p') else '')
+    moods=''.join(f'<button type="button" class="mood{" on" if k==0 else ""}" data-mood="{mid}" aria-pressed="{"true" if k==0 else "false"}"><img src="{{A}}faces/{mid}.svg" alt="" width="56" height="56" loading="lazy"><span>{lab}</span></button>' for k,(mid,lab) in enumerate(x['moods']))
+    meet_faces=''.join(f'<img class="meet-face{" on" if k==0 else ""}" data-mood="{mid}" src="{{A}}qingqing-{mid}.svg" alt="" width="220" height="220" loading="lazy">' for k,(mid,_) in enumerate(x['moods']))
     faq=''.join(f'<details{" open" if k<3 else ""}><summary><span class="ib sm">{icon(i)}</span><span class="q">{q}</span><span class="pm" aria-hidden="true"></span></summary><div class="ans"><div><p>{a}</p></div></div></details>' for k,(i,(q,a)) in enumerate(zip(FAQI,t['faq'])))
     body=f'''<main>
 <section class="hero">{CLOUDS}<div class="wrap hin">
@@ -241,6 +249,11 @@ def home(lang):
 <p class="shotnote">{t['shotnote']}</p></section>
 <section id="features" class="feat"><div class="wrap"><p class="kick reveal">{t['fk']}</p><h2 class="reveal">{t['fh']}</h2></div>
 <div class="wrap sgrid"><div class="steps">{steps}</div><div class="sticky"><div class="devbox">{frames}</div><div class="dots" aria-hidden="true">{dots}</div></div></div></section>
+<section id="qingqing" class="meet"><div class="wrap"><div class="meetcard reveal">
+<div class="meetvis"><div class="meet-stage" aria-hidden="true">{meet_faces}</div>
+<div class="moods" role="group" aria-label="{x['meet_h']}">{moods}</div></div>
+<div class="meettxt"><h2>{x['meet_h']}</h2><p>{x['meet_p']}</p></div>
+</div></div></section>
 <section class="dark"><div class="wrap"><h2 class="reveal">{x['dark_h']}</h2>{dark_lede}<div class="stats">{stats}</div></div></section>
 <section id="privacy" class="priv"><div class="wrap"><img class="shield reveal" src="{{A}}icons/in-short-shield.svg" alt="" width="56" height="56"><h2 class="reveal">{x['priv_h']}</h2><p class="lede reveal">{x['priv_p']}</p>
 <div class="tiles">{tiles}</div><p class="plink reveal"><a href="privacy/">{x['priv_link']}</a></p></div></section>
