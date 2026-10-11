@@ -17,7 +17,7 @@ T = {
   name='English', title='Clairsy — Your stress, like the weather',
   nav=['Features','FAQ','Support','Privacy','Terms'],
   badge='Clairsy · HRV stress monitor for Apple Watch',
-  h1='Your stress, like the <em>weather</em>.', sub='Reads your Apple Watch. Compared only to you. Stress and Daily Vigor, live on your wrist.',
+  h1='Your stress, like the <em>weather</em>.', comp='Qingqing stays with you, learning you — your most understanding health companion.', sub='Reads your Apple Watch. Compared only to you. Stress and Daily Vigor, live on your wrist.',
   lead="Clairsy reads heart rate variability and heart rate from your Apple Watch, compares them with your own baseline, and tells you how you're doing right now — Chill, Steady, Tense or Stressed. Qingqing changes with you. Everything is calculated on your iPhone and Apple Watch.",
   dl1='Download on the', dl2='App Store', free='Free: see your stress level and Daily Vigor %.',
   req='Requires iPhone with iOS 18 or later and a paired Apple Watch (watchOS 11 or later).',
@@ -50,7 +50,7 @@ T = {
   name='简体中文', title='Clairsy 晴晴 — Apple Watch 的 HRV 压力监测',
   nav=['功能','常见问题','支持','隐私','条款'],
   badge='Clairsy 晴晴 · Apple Watch 的 HRV 压力监测',
-  h1='压力，<br>像<em>天气</em>一样看得见', sub='读你的 Apple Watch，只和你自己比。压力与今日元气，表盘跟着刷新。',
+  h1='压力，<br>像<em>天气</em>一样看得见', comp='晴晴慢慢陪着你，做最懂你的健康伙伴。', sub='读你的 Apple Watch，只和你自己比。压力与今日元气，表盘跟着刷新。',
   lead='Clairsy 读取 Apple Watch 记录的心率变异性（HRV）和心率，和你自己的基线比较，告诉你此刻状态——真巴适、hold住、有点烦还是鸭梨大。晴晴的表情会跟着你变。所有计算都在你的 iPhone 和 Apple Watch 上完成。',
   dl1='在 App Store', dl2='下载', free='免费就能看此刻压力和元气百分比。',
   req='需要 iOS 18 或更高版本的 iPhone，并配对 Apple Watch（watchOS 11 或更高版本）。',
@@ -198,7 +198,7 @@ X={'en':dict(
   points=[('Your baseline only','Recovery HRV and resting HR vs your personal baseline; check-ins fine-tune it.'),
           ('Live on your wrist','Watch face and complications refresh when a new sample lands.'),
           ('Never leaves your device','No servers, no account, no tracking.'),
-          ('Qingqing stays on your wrist','Learning you day by day, your most faithful health companion. When stress rises, a soft nudge to take a breather.')],
+          ('On your wrist','Check-ins help it learn you; a soft nudge when stress rises.')],
   priv_h='Private by design.',
   priv_p='Clairsy only reads the Health data you allow it to read, and does all of its calculations on your iPhone and Apple Watch. We have no servers. We never upload your data to us or to anyone else, and we never use it for advertising.',
   priv_link='Read the Privacy Policy ›', breath_alt='Breathing exercise'),
@@ -208,7 +208,7 @@ X={'en':dict(
   points=[('只和自己比','恢复 HRV 与静息心率对照你的个人基线；打卡后还会微调。'),
           ('表盘跟着刷新','新样本一到，表盘和复杂功能跟着更新。'),
           ('数据不出机','无服务器、无账号、无追踪。'),
-          ('晴晴一直在你手腕上','慢慢读懂你，做最了解你、最忠实的健康伙伴。压力来了，轻轻喊你缓一口气。')],
+          ('晴晴在你手腕上','打卡后更懂你，压力大时轻轻喊你缓一口气。')],
   priv_h='隐私，从设计开始。',
   priv_p='Clairsy 只读取你授权的「健康」数据，所有计算都在你的 iPhone 和 Apple Watch 上完成。我们没有服务器，不会把你的任何数据上传给我们或任何第三方，也不会把数据用于广告。',
   priv_link='阅读隐私政策 ›', breath_alt='呼吸减压')}
@@ -230,7 +230,7 @@ def home(lang):
     faq=''.join(f'<details{" open" if k<3 else ""}><summary><span class="ib sm">{icon(i)}</span><span class="q">{q}</span><span class="pm" aria-hidden="true"></span></summary><div class="ans"><div><p>{a}</p></div></div></details>' for k,(i,(q,a)) in enumerate(zip(FAQI,t['faq'])))
     body=f'''<main>
 <section class="hero">{CLOUDS}<div class="wrap hin">
-<p class="eyebrow ld" style="--d:0">{t['badge']}</p><h1 class="ld" style="--d:1">{t['h1'].replace('<br>',' ')}</h1><p class="sub ld" style="--d:2">{t['sub']}</p><p class="lead ld" style="--d:3">{t['lead']}</p>
+<p class="eyebrow ld" style="--d:0">{t['badge']}</p><h1 class="ld" style="--d:1">{t['h1'].replace('<br>',' ')}</h1><p class="comp ld" style="--d:2">{t['comp']}</p><p class="sub ld" style="--d:2">{t['sub']}</p><p class="lead ld" style="--d:3">{t['lead']}</p>
 <div class="cta ld" style="--d:4"><a class="appstore" href="{C['app_store_url']}"><img src="{{A}}badge-{'zh-cn' if zh else 'en-us'}.svg" alt="{t['dl1']} {t['dl2']}" height="48"></a><span class="free">{t['free']}</span></div>
 <p class="req ld" style="--d:5">{t['req']}</p></div>
 <div class="stage ld" style="--d:5"><div class="glow"></div>
