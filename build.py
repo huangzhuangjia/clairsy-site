@@ -118,7 +118,7 @@ def home(lang):
     faq=''.join(f'<details{" open" if i<3 else ""}><summary>{q}</summary><p>{a}</p></details>' for i,(q,a) in enumerate(t['faq']))
     body=f'''<main><section class="hero"><div class="wrap hgrid"><div class="hcopy">
 <span class="pill"><i></i>{t['badge']}</span><h1>{t['h1']}</h1><p class="lead">{t['lead']}</p>
-<div class="cta"><a class="appstore" href="{C['app_store_url']}"><img src="{{A}}badge-{'zh-cn' if lang=='zh' else 'en-us'}.svg" alt="{t['dl1']} {t['dl2']}" height="48"></a><span class="free">{t['free']}</span></div>
+<div class="cta"><a class="appstore" href="{C['app_store_url']}"><img src="{{A}}badge-{'zh-cn' if lang=='zh' else 'en-us'}.svg" alt="{t['dl1']} {t['dl2']}" height="48"></a></div>
 <p class="req">{t['req']}</p></div>
 <div class="hvis"><div class="phone"><img src="../assets/phone.webp" alt="Clairsy Today screen" width="603" height="1311"></div>
 <div class="watch"><img src="../assets/watch.webp" alt="Clairsy Apple Watch app" width="416" height="496"></div>
@@ -183,7 +183,7 @@ def home(lang):
     faq=''.join(f'<details{" open" if k<3 else ""}><summary><span class="ib sm">{icon(i)}</span><span class="q">{q}</span><span class="pm" aria-hidden="true"></span></summary><p>{a}</p></details>' for k,(i,(q,a)) in enumerate(zip(FAQI,t['faq'])))
     body=f'''<main><section class="hero"><div class="wrap hgrid"><div class="hcopy">
 <span class="pill"><i></i>{t['badge']}</span>{WEATHER}<h1>{t['h1']}</h1><p class="sub">{t['sub']}</p><p class="lead">{t['lead']}</p>
-<div class="cta"><a class="appstore" href="{C['app_store_url']}"><img src="{{A}}badge-{'zh-cn' if lang=='zh' else 'en-us'}.svg" alt="{t['dl1']} {t['dl2']}" height="48"></a><span class="free">{t['free']}</span></div>
+<div class="cta"><a class="appstore" href="{C['app_store_url']}"><img src="{{A}}badge-{'zh-cn' if lang=='zh' else 'en-us'}.svg" alt="{t['dl1']} {t['dl2']}" height="48"></a></div>
 <p class="req">{t['req']}</p></div>
 <div class="hvis"><div class="halo"></div>
 <div class="dev ph1"><img src="{{A}}vigor{'-en' if lang=='en' else ''}.webp" alt="" width="603" height="1311"></div>
@@ -263,7 +263,7 @@ def home(lang):
 <section class="hero">{CLOUDS}<div class="wrap hgrid"><div class="hin">
 <svg class="wx ld" style="--d:0" viewBox="0 0 64 44" aria-hidden="true"><circle cx="40" cy="16" r="11" fill="#FFD45C"/><path d="M14 40h30a10 10 0 0 0 1-19.9A13 13 0 0 0 20.5 24 8 8 0 0 0 14 40z" fill="#fff" stroke="#E3EFE8"/></svg>
 <p class="eyebrow ld" style="--d:0">{t['badge']}</p><h1 class="ld" style="--d:1">{t['h1'].replace('<br>',' ')}</h1><p class="comp ld" style="--d:2">{t['comp']}</p><p class="lead ld" style="--d:3">{t['lead']}</p>
-<div class="cta ld" style="--d:4"><a class="appstore" href="{C['app_store_url']}"><img src="{{A}}badge-{'zh-cn' if zh else 'en-us'}.svg" alt="{t['dl1']} {t['dl2']}" height="48"></a><span class="free">{t['free']}</span></div>
+<div class="cta ld" style="--d:4"><a class="appstore" href="{C['app_store_url']}"><img src="{{A}}badge-{'zh-cn' if zh else 'en-us'}.svg" alt="{t['dl1']} {t['dl2']}" height="48"></a></div>
 <p class="req ld" style="--d:5">{t['req']}</p></div>
 <div class="hvis"><div class="stage ld" style="--d:5"><div class="glow"></div>
 <div class="dev p1" data-px="-0.06"><img src="{{A}}vigor{sfx}.webp" alt="" width="603" height="1311"></div>
