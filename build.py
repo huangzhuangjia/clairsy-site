@@ -226,10 +226,18 @@ X={'en':dict(
   priv_h='隐私，从设计开始。',
   priv_p='Clairsy 只读取你授权的「健康」数据，所有计算都在你的 iPhone 和 Apple Watch 上完成。我们没有服务器，不会把你的任何数据上传给我们或任何第三方，也不会把数据用于广告。',
   priv_link='阅读隐私政策 ›', breath_alt='呼吸减压', sleep_alt='睡眠', trends_alt='趋势', hrv_alt='今日 · 极速刷新', alerts_alt='压力提醒')}
+MEMBER={'en':dict(free_h='Free',mem_h='Clairsy Membership',
+  free=['Today page — stress level, HRV and Daily Vigor %','Sleep duration, score, sleep debt and stages','Breathing exercises','Home Screen widgets','Free complications and one basic watch face'],
+  mem=['Trends','Daily Vigor details','In-depth sleep analysis','Custom stress-alert frequency','All complications and watch faces'],
+  note='Choose a monthly or yearly subscription (7-day free trial for eligible Apple IDs) or Lifetime (one-time purchase). All purchases are handled by Apple; prices are shown on the App Store purchase sheet.'),
+ 'zh':dict(free_h='免费',mem_h='Clairsy 会员',
+  free=['今日页——压力档位、HRV 和今日元气百分比','睡眠时长、得分、睡眠负债和分期','呼吸减压','主屏幕小组件','免费复杂功能和一款基础表盘'],
+  mem=['趋势','元气详情','深度睡眠分析','自定义压力提醒频率','全部复杂功能和表盘'],
+  note='可选按月或按年订阅（符合条件的 Apple ID 享 7 天免费试用），或终身买断（一次性购买）。所有购买均由 Apple 处理，价格以 App Store 购买页显示为准。')}
 CLOUDS='<div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div>'
 
 def home(lang):
-    t=T[lang]; x=X[lang]; L=LABELS[lang]; zh=lang=='zh'; sfx='' if zh else '-en'
+    t=T[lang]; x=X[lang]; L=LABELS[lang]; M=MEMBER[lang]; zh=lang=='zh'; sfx='' if zh else '-en'
     shots=[f'<div class="ph"><img src="{{A}}today-{lang}.webp" alt="Clairsy Today" width="603" height="1311" loading="lazy"></div>',
            f'<div class="ph"><img src="{{A}}hrv-{lang}.webp" alt="{x["hrv_alt"]}" width="603" height="1311" loading="lazy"></div>',
            f'<div class="ph"><img src="{{A}}alerts-{lang}.webp" alt="{x["alerts_alt"]}" width="603" height="1311" loading="lazy"></div>',
@@ -266,7 +274,10 @@ def home(lang):
 </div></div></section>
 <section id="privacy" class="priv"><div class="wrap"><img class="shield reveal" src="{{A}}icons/in-short-shield.svg" alt="" width="56" height="56"><h2 class="reveal">{x['priv_h']}</h2><p class="lede reveal">{x['priv_p']}</p>
 <div class="tiles">{tiles}</div><p class="plink reveal"><a href="privacy/">{x['priv_link']}</a></p></div></section>
-<section class="mem"><div class="wrap"><div class="mcard reveal"><div><span class="mpill">{icon('membership','ic xs')}{L['member']}</span><h3>{t['mh']}</h3></div><p>{t['mb']}</p></div></div></section>
+<section class="mem"><div class="wrap"><div class="memhead reveal"><span class="mpill">{icon('membership','ic xs')}{L['member']}</span><h2>{t['mh']}</h2></div>
+<div class="mcols"><div class="mcol reveal"><h3>{M['free_h']}</h3><ul>{''.join(f'<li>{i}</li>' for i in M['free'])}</ul></div>
+<div class="mcol pro reveal"><h3>{M['mem_h']}</h3><ul>{''.join(f'<li>{i}</li>' for i in M['mem'])}</ul></div></div>
+<p class="mnote reveal">{M['note']}</p></div></section>
 <section id="faq" class="faqsec"><div class="wrap narrow"><p class="kick reveal">{t['sk']}</p><h2 class="reveal">{t['sh']}</h2><div class="faq">{faq}</div>
 <div id="support" class="help reveal"><img class="hm" src="{{A}}qingqing.svg" alt="" width="96" height="96"><div class="ht"><h3>{t['help']}</h3><p>{t['helpb']()}</p><small>{t['dev']()}</small></div>
 <a class="mailbtn" href="mailto:{C['support_email']}">{icon('mail','ic w')}{html.escape(C['support_email'])}</a></div></div></section></main>'''

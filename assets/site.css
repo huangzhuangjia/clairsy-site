@@ -226,3 +226,34 @@ html[lang=zh-Hans] .stat b,html[lang=zh-Hans] .stat small{word-break:keep-all}
  .feat{padding-top:72px}
 }
 @media (max-width:820px){.shotnote{padding:6px 16px 0}}
+
+/* polish: meet + membership, seamless sections */
+.meet{background:linear-gradient(180deg,#fff 0%,#F6FBF8 55%,var(--mintbg) 100%);padding:120px 0 120px}
+.meetcard{background:none;border:0;border-radius:0;padding:0;grid-template-columns:1fr 1fr;gap:72px}
+.meetvis{position:relative}.meetvis::before{content:"";position:absolute;left:50%;top:38%;width:420px;height:420px;transform:translate(-50%,-50%);background:radial-gradient(closest-side,#BFEBD3,#BFEBD300);z-index:-1}
+.meetvis{z-index:0}.meet-stage{width:260px;height:260px}
+.mood{background:#ffffffd9;border:1px solid #E3F1E8;box-shadow:none}
+.meettxt h2{font-size:56px;font-weight:900;letter-spacing:-.025em;line-height:1.08;margin:0 0 20px}
+html[lang=zh-Hans] .meettxt h2{letter-spacing:-.005em}
+.meettxt p{font-size:19px;color:#5E6B65;max-width:30em}
+.priv{background:linear-gradient(180deg,var(--mintbg),#F6FBF8 60%,#fff)}
+.mem{background:#fff;padding:110px 0 120px}
+.memhead{text-align:center;margin:0 auto 48px}.memhead h2{font-size:52px;font-weight:900;letter-spacing:-.02em;line-height:1.12;margin:18px auto 0;max-width:820px}
+html[lang=zh-Hans] .memhead h2{letter-spacing:0}
+.mcols{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:940px;margin:0 auto}
+.mcol{background:#F6FBF8;border:1px solid #E3F1E8;border-radius:30px;padding:36px 36px 30px}
+.mcol.pro{background:linear-gradient(160deg,#DDF3E7,#F2FAF6 70%);border-color:#CDEBD9}
+.mcol h3{margin:0 0 18px;font-size:24px;font-weight:900;letter-spacing:-.01em}.mcol.pro h3{color:var(--mintd)}
+.mcol ul{list-style:none;margin:0;padding:0}.mcol li{position:relative;padding:9px 0 9px 34px;font-size:16.5px;line-height:1.5;color:#3E4C45;border-top:1px solid #0000000a}.mcol li:first-child{border-top:0}
+.mcol li::before{content:"";position:absolute;left:0;top:11px;width:22px;height:22px;border-radius:50%;background:var(--mint) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat}
+.mcol:not(.pro) li::before{background-color:#9FD9BA}
+.mnote{max-width:760px;margin:28px auto 0;text-align:center;font-size:14px;line-height:1.7;color:var(--ink3)}
+.faqsec{background:linear-gradient(180deg,#fff 0%,var(--mintbg) 22%);margin-top:0}
+@media (max-width:960px){.meetcard{grid-template-columns:1fr;gap:36px}.meettxt h2{text-align:center}}
+@media (max-width:820px){
+ .meet{padding:70px 0 80px}.meet-stage{width:180px;height:180px}.meetvis::before{width:300px;height:300px}
+ .meettxt h2{font-size:34px}.meettxt p{font-size:16px}
+ .mem{padding:70px 0 80px}.memhead{margin-bottom:28px}.memhead h2{font-size:30px}
+ .mcols{grid-template-columns:1fr;gap:14px}.mcol{padding:24px 20px 18px;border-radius:24px}.mcol h3{font-size:20px}.mcol li{font-size:15px}
+}
+.memhead .mpill{background:var(--mintbg)}
