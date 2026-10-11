@@ -90,7 +90,7 @@ The App contains links to external websites (for example, doi.org links to the r
 
 ## 6. Automated assessment
 
-On your device, the App **automatically** compares your HRV, heart rate, and other data with your personal baseline to produce reference results such as your stress level, Daily Vigor, and sleep score. You can see how these are calculated in the App's “怎么算” (How it's calculated) explanations. These results are for your own reference only. They are **not** used to make any decision that significantly affects your rights or interests, and they are not given to anyone.
+On your device, the App **automatically** compares your HRV, heart rate, and other data with your personal baseline to produce reference results such as your stress level, Daily Vigor, and sleep score. You can see how these are calculated in the App's “How it’s calculated” explanations. These results are for your own reference only. They are **not** used to make any decision that significantly affects your rights or interests, and they are not given to anyone.
 
 ## 7. Health disclaimer
 

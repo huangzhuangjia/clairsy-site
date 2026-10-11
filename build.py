@@ -18,7 +18,7 @@ T = {
   nav=['Features','FAQ','Support','Privacy','Terms'],
   badge='Clairsy · HRV stress monitor for Apple Watch',
   h1='Your stress, like the <em>weather</em>.', sub='Read from your Apple Watch, compared only to you.',
-  lead="Clairsy reads heart rate variability and heart rate from your Apple Watch, compares them with your own baseline, and tells you how you're doing right now — Chill, Steady, Tense or Stressed. 晴晴 changes with you. Everything is calculated on your iPhone and Apple Watch.",
+  lead="Clairsy reads heart rate variability and heart rate from your Apple Watch, compares them with your own baseline, and tells you how you're doing right now — Chill, Steady, Tense or Stressed. Qingqing changes with you. Everything is calculated on your iPhone and Apple Watch.",
   dl1='Download on the', dl2='App Store', free='Free to start · 7-day free trial on subscriptions',
   req='Requires iPhone with iOS 18 or later and a paired Apple Watch (watchOS 11 or later).',
   shotnote='Screenshots from the current app (demo data). The app interface is in Simplified Chinese.',
@@ -26,7 +26,7 @@ T = {
   fk='FEATURES', fh='Built around your own baseline',
   cards=[('Stress, in plain words','HRV and resting heart rate are compared with your personal baseline and turned into four easy levels — Chill, Steady, Tense, Stressed — with a stress index and 7-day average. Quick mood check-ins calibrate it to how you actually feel.'),
          ('Daily Vigor & sleep','Each morning Clairsy sets your Daily Vigor from recovery, sleep and training load, then shows how stress drains it through the day. Sleep duration, score, sleep debt and stages at a glance.'),
-         ('Breathe it down','Resonance breathing (4 in, 6 out), cyclic sighing, 4-7-8 and box breathing, with 晴晴 breathing along — on iPhone and Apple Watch. Before-and-after readings show what changed.'),
+         ('Breathe it down','Resonance breathing (4 in, 6 out), cyclic sighing, 4-7-8 and box breathing, with Qingqing breathing along — on iPhone and Apple Watch. Before-and-after readings show what changed.'),
          ('On your wrist','A watch app with your current level and a one-tap “Measure now”, watch-face complications, Home Screen widgets, and optional local stress alerts.')],
   mh='Free to start, membership when you want more',
   mb='Free: the Today page — stress level, HRV and Daily Vigor % — plus sleep duration, score, sleep debt and stages, breathing exercises, Home Screen widgets, free complications and one basic watch face. Clairsy Membership unlocks trends, Daily Vigor details, in-depth sleep analysis, custom stress-alert frequency, and all complications and watch faces. Choose a monthly or yearly subscription (7-day free trial for eligible Apple IDs) or Lifetime (one-time purchase). All purchases are handled by Apple; prices are shown on the App Store purchase sheet.',
@@ -81,7 +81,7 @@ T = {
   privacy='隐私政策', terms='使用条款'),
 }
 
-MASCOT = '<img src="../{up}assets/qingqing.svg" alt="晴晴" width="{s}" height="{s}">'
+MASCOT = '<img src="../{up}assets/qingqing.svg" alt="{alt}" width="{s}" height="{s}">'
 
 def page(lang, kind, body, title):
     t=T[lang]; up='../' if kind!='home' else ''
@@ -89,10 +89,10 @@ def page(lang, kind, body, title):
     rel={'home':'','privacy':'privacy/','terms':'terms/'}[kind]
     hl='en' if lang=='en' else 'zh-Hans'
     n=t['nav']; h='' if kind=='home' else '../'
-    nav=f'''<header class="nav wrap"><a class="logo" href="{h}./">{MASCOT.format(up=up,s=36)}<span>Clairsy</span></a>
+    nav=f'''<header class="nav wrap"><a class="logo" href="{h}./">{MASCOT.format(up=up,s=36,alt='Qingqing' if lang=='en' else '晴晴')}<span>Clairsy</span></a>
 <nav><a href="{h}./#features">{n[0]}</a><a href="{h}./#faq">{n[1]}</a><a href="{h}./#support">{n[2]}</a><a href="{up}../{lang}/privacy/">{n[3]}</a><a href="{up}../{lang}/terms/">{n[4]}</a>
 <span class="lang"><a href="{up}../en/{rel}" data-lang="en" class="{'on' if lang=='en' else ''}">EN</a><a href="{up}../zh/{rel}" data-lang="zh" class="{'on' if lang=='zh' else ''}">中文</a></span></nav></header>'''
-    foot=f'''<footer><div class="wrap"><div class="frow"><a class="logo sm" href="{h}./">{MASCOT.format(up=up,s=28)}<span>Clairsy</span></a>
+    foot=f'''<footer><div class="wrap"><div class="frow"><a class="logo sm" href="{h}./">{MASCOT.format(up=up,s=28,alt='Qingqing' if lang=='en' else '晴晴')}<span>Clairsy</span></a>
 <div class="flinks"><a href="{h}./#support">{t['foot'][0]}</a><a href="{up}../{lang}/privacy/">{t['foot'][1]}</a><a href="{up}../{lang}/terms/">{t['foot'][2]}</a>{mail()}</div></div>
 <hr><p>{t['notice']}</p><p class="tm">{t['tm']()}</p></div></footer>'''
     return f'''<!doctype html><html lang="{hl}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -153,11 +153,11 @@ def page(lang, kind, body, title):
     hl='en' if lang=='en' else 'zh-Hans'
     n=t['nav']; h='' if kind=='home' else '../'
     cur=lambda k:' aria-current="page"' if k==kind else ''
-    nav=f'''<header class="top"><div class="nav wrap"><a class="logo" href="{h}./">{MASCOT.format(up=up,s=36)}<span>Clairsy</span></a>
+    nav=f'''<header class="top"><div class="nav wrap"><a class="logo" href="{h}./">{MASCOT.format(up=up,s=36,alt='Qingqing' if lang=='en' else '晴晴')}<span>Clairsy</span></a>
 <nav id="menu"><a href="{h}./#features">{n[0]}</a><a href="{h}./#faq">{n[1]}</a><a href="{h}./#support">{n[2]}</a><a href="{up}../{lang}/privacy/"{cur('privacy')}>{n[3]}</a><a href="{up}../{lang}/terms/"{cur('terms')}>{n[4]}</a></nav>
 <span class="lang"><img src="{A}icons/globe.svg" alt="" aria-hidden="true"><a href="{up}../en/{rel}" data-lang="en" class="{'on' if lang=='en' else ''}" lang="en">EN</a><a href="{up}../zh/{rel}" data-lang="zh" class="{'on' if lang=='zh' else ''}" lang="zh-Hans">中文</a></span>
 <button class="burger" aria-label="{LABELS[lang]['menu']}" aria-controls="menu" aria-expanded="false"><span></span><span></span><span></span></button></div></header>'''
-    foot=f'''<footer><div class="wrap"><div class="frow"><a class="logo sm" href="{h}./">{MASCOT.format(up=up,s=28)}<span>Clairsy</span></a>
+    foot=f'''<footer><div class="wrap"><div class="frow"><a class="logo sm" href="{h}./">{MASCOT.format(up=up,s=28,alt='Qingqing' if lang=='en' else '晴晴')}<span>Clairsy</span></a>
 <div class="flinks"><a href="{h}./#support">{t['foot'][0]}</a><a href="{up}../{lang}/privacy/">{t['foot'][1]}</a><a href="{up}../{lang}/terms/">{t['foot'][2]}</a>{mail()}</div></div>
 <hr><p>{t['notice']}</p><p class="tm">{t['tm']()}</p></div></footer>'''
     return f'''<!doctype html><html lang="{hl}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">

@@ -54,7 +54,7 @@ You agree to use the App only for lawful, personal, non-commercial purposes. You
 
 ## 7. Intellectual property
 
-The App's software, interface, the Qingqing (晴晴) mascot, text, icons, watch-face assets, and other content belong to the developer or their respective owners. Apart from the license granted under the Apple Standard EULA, you may not copy, modify, or distribute them without permission.
+The App's software, interface, the Qingqing mascot, text, icons, watch-face assets, and other content belong to the developer or their respective owners. Apart from the license granted under the Apple Standard EULA, you may not copy, modify, or distribute them without permission.
 
 ## 8. Changes to the service
 
