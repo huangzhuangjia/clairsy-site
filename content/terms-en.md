@@ -6,6 +6,8 @@
 **Effective date:** [Effective date]
 **Last updated:** [Last updated date]
 
+*Sections in bold are especially important to your rights. Please read them carefully.*
+
 Welcome to Clairsy (the "App"). The App is provided by an individual developer, **[Developer Name]** ("we" or "us"). By downloading, installing, or using the App, you confirm that you have read and agree to these Terms and our [Privacy Policy](./privacy-en.md). If you do not agree, please do not use the App.
 
 These Terms supplement Apple's [Licensed Application End User License Agreement](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/) (the "Apple Standard EULA"). If the two conflict, these Terms control to the extent permitted by law, except for provisions of the Apple Standard EULA concerning Apple's rights.
@@ -25,12 +27,12 @@ The App reads the Apple Health data you authorize (such as heart rate variabilit
 
 ## 3. Free features and membership
 
-- **Free:** the core readings on the home screen (stress level, HRV, Daily Vigor), Home Screen widgets, breathing exercises, free complications, and basic watch faces.
-- **Clairsy Membership:** unlocks trends, Daily Vigor details (breakdown and timeline), in-depth sleep analysis, custom stress-alert frequency, member complications and watch faces, and more. **The membership page in the App describes exactly what is included.**
+- **Free:** the Today page (stress level, HRV, and Daily Vigor %); sleep duration, score, sleep debt, and stages; breathing exercises; Home Screen widgets (Current Status, Daily Vigor, Today Overview); free complications; and one basic watch face.
+- **Clairsy Membership:** unlocks trends, Daily Vigor details (breakdown and all-day curve), in-depth sleep analysis, custom stress-alert frequency, member complications and watch faces, and more. **The membership page in the App describes exactly what is included.**
 - Membership options (**the price shown on the App Store purchase sheet applies**; reference prices: US $4.99/month, $29.99/year, $59.99 lifetime; mainland China ¥15/month, ¥98/year, ¥168 lifetime):
   1. **Monthly:** auto-renewable subscription, renews every 1 month;
   2. **Yearly:** auto-renewable subscription, renews every 1 year;
-  3. **Lifetime:** one-time purchase (non-consumable in-app purchase), does not renew.
+  3. **Lifetime (one-time purchase):** non-consumable in-app purchase, does not renew.
 
 ## 4. Auto-renewable subscription terms (important)
 
@@ -40,10 +42,10 @@ The App reads the Apple Health data you authorize (such as heart rate variabilit
 - **Manage or cancel:** at any time, in Settings › [your name] › Subscriptions on your iPhone, or in the App under Settings › Membership › Manage Subscription. After you cancel, you keep membership features until the end of the period you have already paid for.
 - **Refunds:** Apple handles all payments and refunds; we cannot issue refunds directly. To request one, visit [reportaproblem.apple.com](https://reportaproblem.apple.com) or contact Apple Support.
 
-## 5. Lifetime membership
+## 5. Lifetime (one-time purchase)
 
-- Lifetime membership is a one-time purchase tied to your Apple ID. It **does not renew**. It stays valid **for as long as the App is offered and supported**, and works on any device signed in with the same Apple ID.
-- Lifetime membership **is not available through Family Sharing**.
+- Lifetime is a one-time purchase tied to your Apple ID. It **does not renew**. It stays valid **for as long as the App is offered and supported**, and works on any device signed in with the same Apple ID.
+- Lifetime **is not available through Family Sharing**.
 - After changing devices or reinstalling, tap **Restore Purchases** on the membership page or in Settings to get it back.
 
 ## 6. Acceptable use

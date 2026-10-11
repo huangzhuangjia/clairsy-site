@@ -10,13 +10,12 @@ URLs: `/` (auto: saved choice → navigator.language zh* → 中文, else Englis
 Unresolved values render highlighted (yellow).
 | key | current |
 |---|---|
-| developer_name / developer_name_zh | [Developer Name] / [开发者姓名] |
-| support_email | support@example.com |
-| effective_date_en / _zh | [Effective date] / [生效日期] |
-| last_updated_en / _zh | [Last updated date] / [更新日期] |
-| court_en / court_zh | governing-law court location |
-| reply_time_en / _zh | within 3 business days / 3 个工作日内 (support only; legal text keeps its own statutory timing) |
-| app_store_url | https://apps.apple.com/ (replace with the app's App Store link) |
+| developer_name / developer_name_zh | Zhuangjia Huang / 黄壮佳 |
+| support_email | huangzhuangjia@gmail.com |
+| effective_date_* / last_updated_* | 2026-10-11 |
+| court_en / court_zh | Guangzhou, China / 中国广州 |
+| reply_time_en / _zh | within 3 business days / 3 个工作日内 (support only; privacy policy commits to 15 business days) |
+| app_store_url | **still placeholder** https://apps.apple.com/ — badge shows a dashed yellow outline until replaced |
 
 App Store badge is a placeholder button — replace with official Apple "Download on the App Store" artwork per Apple's marketing guidelines.
-Screenshots in `assets/phone.webp` / `assets/watch.webp` were captured from the current master build (DEBUG `-heroDemo relaxed` / `-watchDemo relaxed`).
+Hero images `assets/vigor.webp`, `today-{en,zh}.webp`, `watch.webp` (Figma v4, section 360:2) were captured from the current master build (DEBUG `-heroDemo relaxed` / `-watchDemo relaxed`).
