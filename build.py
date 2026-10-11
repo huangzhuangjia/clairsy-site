@@ -110,7 +110,7 @@ def home(lang):
     faq=''.join(f'<details{" open" if i<3 else ""}><summary>{q}</summary><p>{a}</p></details>' for i,(q,a) in enumerate(t['faq']))
     body=f'''<main><section class="hero"><div class="wrap hgrid"><div class="hcopy">
 <span class="pill"><i></i>{t['badge']}</span><h1>{t['h1']}</h1><p class="lead">{t['lead']}</p>
-<div class="cta"><a class="appstore" href="{C['app_store_url']}" title="Placeholder — replace with official Apple badge artwork"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#fff"/></svg><span><small>{t['dl1']}</small>{t['dl2']}</span></a><span class="free">{t['free']}</span></div>
+<div class="cta"><a class="appstore" href="{C['app_store_url']}"><img src="{{A}}badge-{'zh-cn' if lang=='zh' else 'en-us'}.svg" alt="{t['dl1']} {t['dl2']}" height="48"></a><span class="free">{t['free']}</span></div>
 <p class="req">{t['req']}</p></div>
 <div class="hvis"><div class="phone"><img src="../assets/phone.webp" alt="Clairsy Today screen" width="603" height="1311"></div>
 <div class="watch"><img src="../assets/watch.webp" alt="Clairsy Apple Watch app" width="416" height="496"></div>
@@ -175,7 +175,7 @@ def home(lang):
     faq=''.join(f'<details{" open" if k<3 else ""}><summary><span class="ib sm">{icon(i)}</span><span class="q">{q}</span><span class="pm" aria-hidden="true"></span></summary><p>{a}</p></details>' for k,(i,(q,a)) in enumerate(zip(FAQI,t['faq'])))
     body=f'''<main><section class="hero"><div class="wrap hgrid"><div class="hcopy">
 <span class="pill"><i></i>{t['badge']}</span>{WEATHER}<h1>{t['h1']}</h1><p class="sub">{t['sub']}</p><p class="lead">{t['lead']}</p>
-<div class="cta"><a class="appstore" href="{C['app_store_url']}" data-placeholder="{'1' if unresolved(C['app_store_url']) else '0'}" title="Placeholder link — replace with the real App Store URL and official Apple badge artwork"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#fff"/></svg><span><small>{t['dl1']}</small>{t['dl2']}</span></a><span class="free">{t['free']}</span></div>
+<div class="cta"><a class="appstore" href="{C['app_store_url']}"><img src="{{A}}badge-{'zh-cn' if lang=='zh' else 'en-us'}.svg" alt="{t['dl1']} {t['dl2']}" height="48"></a><span class="free">{t['free']}</span></div>
 <p class="req">{t['req']}</p></div>
 <div class="hvis"><div class="halo"></div>
 <div class="dev ph1"><img src="{{A}}vigor.webp" alt="" width="603" height="1311"></div>

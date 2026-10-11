@@ -15,7 +15,7 @@ Unresolved values render highlighted (yellow).
 | effective_date_* / last_updated_* | 2026-10-11 |
 | court_en / court_zh | Guangzhou, China / 中国广州 |
 | reply_time_en / _zh | within 3 business days / 3 个工作日内 (support only; privacy policy commits to 15 business days) |
-| app_store_url | **still placeholder** https://apps.apple.com/ — badge shows a dashed yellow outline until replaced |
+| app_store_url | **still placeholder** https://apps.apple.com/ — not highlighted on the page; replace before launch |
 
-App Store badge is a placeholder button — replace with official Apple "Download on the App Store" artwork per Apple's marketing guidelines.
+App Store badges: official Apple artwork (unmodified) from https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/{en-us,zh-cn}, stored as assets/badge-en-us.svg / badge-zh-cn.svg, shown 48px high (44px on mobile) with ≥12px clear space. The link target is still the placeholder app_store_url — replace it in site.config.json once the app is live.
 Hero images `assets/vigor.webp`, `today-{en,zh}.webp`, `watch.webp` (Figma v4, section 360:2) were captured from the current master build (DEBUG `-heroDemo relaxed` / `-watchDemo relaxed`).
