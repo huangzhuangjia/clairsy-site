@@ -30,8 +30,7 @@ T = {
          ('Daily Energy — plan your day','Each morning Clairsy sets your starting energy from last night’s sleep and recovery. Stress and activity drain it through the day, a nap tops it back up. See how much is left and where you’ll land by tonight, and Qingqing tells you when to push or ease off. Turn on Daily Energy alerts for one line each morning on how charged you are, and a single gentle nudge when you’re running low.'),
          ('Sleep at a glance','Last night’s duration, sleep score, 7-night sleep debt and stages — deep, core, REM and awake — all free, with Qingqing suggesting a bedtime. Membership adds in-depth sleep analysis.'),
          ('Trends you can see','Day, week and month views of your HRV against your baseline, a breakdown of time spent Great, Normal, Elevated and Overload, and a stress heat map that shows when you tend to tense up. Trends are part of Clairsy Membership.'),
-         ('Take a breather with Qingqing','When stress spikes, tap Breathe — or jump in straight from a stress alert. The orb swells and settles with your breath while Qingqing breathes along; on Apple Watch, gentle haptics keep the rhythm so you don’t have to watch the screen, and a tap on the orb pauses or resumes. Choose resonance breathing, cyclic sighing, 4-7-8 or box breathing. Afterward, see how your readings changed — and your Today page remembers you just took a breather.'),
-         ('Your watch face keeps up','Watch face and complications show your current level, with a one-tap “Measure”, Home Screen widgets, and optional local stress alerts. On Ultra 4 and Series 12, fast refresh keeps it more current.')],
+         ('Take a breather with Qingqing','When stress spikes, tap Breathe — or jump in straight from a stress alert. The orb swells and settles with your breath while Qingqing breathes along; on Apple Watch, gentle haptics keep the rhythm so you don’t have to watch the screen, and a tap on the orb pauses or resumes. Choose resonance breathing, cyclic sighing, 4-7-8 or box breathing. Afterward, see how your readings changed — and your Today page remembers you just took a breather.')],
   mh='Free to start, membership when you want more',
   mb='Free: the Today page — stress level, HRV and Daily Energy % — plus sleep duration, score, sleep debt and stages, breathing exercises, Home Screen widgets, free complications and one basic watch face. Clairsy Membership unlocks trends, Daily Energy details, in-depth sleep analysis, custom stress-alert frequency, and all complications and watch faces. Choose a monthly or yearly subscription (7-day free trial for eligible Apple IDs) or Lifetime (one-time purchase). All purchases are handled by Apple; prices are shown on the App Store purchase sheet.',
   sk='SUPPORT', sh='Frequently asked questions',
@@ -67,8 +66,7 @@ T = {
          ('今日元气，安排好你的一天','早上醒来，Clairsy 会根据昨夜睡眠和身体恢复情况，给你今天的元气起点。白天压力、运动会慢慢消耗它，午睡能补回一点。还剩多少、照这个节奏晚上会剩多少，一眼就知道。晴晴会提醒你该冲还是该缓，别等透支了才发现。开启「今日元气提醒」，早上一句话告诉你今天底子如何，元气见底时轻轻提醒一次。'),
          ('睡眠一眼看懂','昨夜睡眠时长、睡眠得分、近 7 晚睡眠负债，以及深睡、浅睡、REM、清醒分期，全部免费；晴晴还会建议今晚几点前睡。会员解锁深度睡眠分析。'),
          ('趋势看得见','按日、周、月查看 HRV 与个人基线的对比、真巴适 / hold住 / 有点烦 / 鸭梨大各占多少时间，还有压力热力图，看清自己一般几点最紧绷。趋势为 Clairsy 会员功能。'),
-         ('缓一口气，晴晴陪你','压力一上来，点「缓一下」就能开始，压力提醒也能直接跳进来。光球跟着节奏一胀一缩，晴晴陪你一起吸气、呼气。手表上用震动带节奏，不用盯着屏幕，点一下光球就能暂停或继续。共振呼吸、循环叹息、4-7-8、方块呼吸四种方式任选。练完会对比前后的读数，告诉你缓得怎么样，今日页也会留下「刚刚缓过」的记录。'),
-         ('表盘跟着变','表盘和复杂功能显示此刻状态，一键「立即测量」；还有主屏幕小组件，以及可选的本地压力提醒。在 Ultra 4、Series 12 上配合极速刷新更及时。')],
+         ('缓一口气，晴晴陪你','压力一上来，点「缓一下」就能开始，压力提醒也能直接跳进来。光球跟着节奏一胀一缩，晴晴陪你一起吸气、呼气。手表上用震动带节奏，不用盯着屏幕，点一下光球就能暂停或继续。共振呼吸、循环叹息、4-7-8、方块呼吸四种方式任选。练完会对比前后的读数，告诉你缓得怎么样，今日页也会留下「刚刚缓过」的记录。')],
   mh='免费开始，想要更多再开会员',
   mb='免费：今日页——压力档位、HRV 和今日元气百分比——以及睡眠时长、得分、睡眠负债和分期、呼吸减压、主屏幕小组件、免费复杂功能和一款基础表盘。Clairsy 会员解锁趋势、元气详情、深度睡眠分析、自定义压力提醒频率，以及全部复杂功能和表盘。可选按月或按年订阅（符合条件的 Apple ID 享 7 天免费试用），或终身买断（一次性购买）。所有购买均由 Apple 处理，价格以 App Store 购买页显示为准。',
   sk='支持', sh='常见问题',
@@ -244,8 +242,7 @@ def home(lang):
            f'<div class="ph"><img src="{{A}}vigor{sfx}.webp" alt="Daily Energy" width="603" height="1311" loading="lazy"></div>',
            f'<div class="ph"><img src="{{A}}sleep-{lang}.webp" alt="{x["sleep_alt"]}" width="603" height="1311" loading="lazy"></div>',
            f'<div class="ph"><img src="{{A}}trends-{lang}.webp" alt="{x["trends_alt"]}" width="603" height="1311" loading="lazy"></div>',
-           f'<div class="ph"><img src="{{A}}breath-{lang}.webp" alt="{x["breath_alt"]}" width="603" height="1311" loading="lazy"></div>',
-           f'<div class="wa"><img src="{{A}}watch{sfx}.webp" alt="Clairsy on Apple Watch" width="416" height="496" loading="lazy"></div>']
+           f'<div class="ph"><img src="{{A}}breath-{lang}.webp" alt="{x["breath_alt"]}" width="603" height="1311" loading="lazy"></div>']
     # dual-device: steps with a matching Apple Watch screen show phone + watch together
     WD={0:('ultra','Clairsy Status Gauge face on Apple Watch Ultra'),1:('status','Clairsy on Apple Watch'),2:('alert','Clairsy stress alert on Apple Watch'),3:('vigor','Daily Energy on Apple Watch'),5:('today','Today’s stress timeline on Apple Watch'),6:('breath','Breathe on Apple Watch')}
     for k,(w,alt) in WD.items():
