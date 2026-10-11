@@ -17,17 +17,17 @@ T = {
   name='English', title='Clairsy — Your stress, like the weather',
   nav=['Features','FAQ','Support','Privacy','Terms'],
   badge='Clairsy · HRV stress monitor for Apple Watch',
-  h1='Your stress, like the <em>weather</em>.', sub='Read from your Apple Watch, compared only to you.',
+  h1='Your stress, like the <em>weather</em>.', sub='Reads your Apple Watch. Compared only to you. Stress and Daily Vigor, live on your wrist.',
   lead="Clairsy reads heart rate variability and heart rate from your Apple Watch, compares them with your own baseline, and tells you how you're doing right now — Chill, Steady, Tense or Stressed. Qingqing changes with you. Everything is calculated on your iPhone and Apple Watch.",
-  dl1='Download on the', dl2='App Store', free='Free to start · 7-day free trial on subscriptions',
+  dl1='Download on the', dl2='App Store', free='Free: see your stress level and Daily Vigor %.',
   req='Requires iPhone with iOS 18 or later and a paired Apple Watch (watchOS 11 or later).',
   shotnote='Screenshots from the current app (demo data).',
   trust=[('On-device only','No servers — nothing is uploaded'),('No account','No sign-up, no login'),('No tracking','No ads, no analytics SDKs'),('Read-only Health','Clairsy never writes to Health')],
   fk='FEATURES', fh='Built around your own baseline',
-  cards=[('Stress, in plain words','HRV and resting heart rate are compared with your personal baseline and turned into four easy levels — Chill, Steady, Tense, Stressed — with a stress index and 7-day average. Quick mood check-ins calibrate it to how you actually feel.'),
-         ('Daily Vigor & sleep','Each morning Clairsy sets your Daily Vigor from recovery, sleep and training load, then shows how stress drains it through the day. Sleep duration, score, sleep debt and stages at a glance.'),
+  cards=[('Stress, plain and clear','HRV and resting heart rate become four clear levels — Chill, Steady, Tense, Stressed — with a stress index and 7-day average. Quick mood check-ins calibrate it to how you actually feel.'),
+         ('Daily Vigor drains','Each morning Clairsy sets your Daily Vigor from recovery, sleep and training load — then stress drains it through the day. Sleep duration, score, sleep debt and stages at a glance.'),
          ('Breathe it down','Resonance breathing (4 in, 6 out), cyclic sighing, 4-7-8 and box breathing, with Qingqing breathing along — on iPhone and Apple Watch. Before-and-after readings show what changed.'),
-         ('On your wrist','A watch app with your current level and a one-tap “Measure now”, watch-face complications, Home Screen widgets, and optional local stress alerts.')],
+         ('Your watch face keeps up','Watch face and complications show your current level, with a one-tap “Measure now”, Home Screen widgets, and optional local stress alerts.')],
   mh='Free to start, membership when you want more',
   mb='Free: the Today page — stress level, HRV and Daily Vigor % — plus sleep duration, score, sleep debt and stages, breathing exercises, Home Screen widgets, free complications and one basic watch face. Clairsy Membership unlocks trends, Daily Vigor details, in-depth sleep analysis, custom stress-alert frequency, and all complications and watch faces. Choose a monthly or yearly subscription (7-day free trial for eligible Apple IDs) or Lifetime (one-time purchase). All purchases are handled by Apple; prices are shown on the App Store purchase sheet.',
   sk='SUPPORT', sh='Frequently asked questions',
@@ -50,17 +50,17 @@ T = {
   name='简体中文', title='Clairsy 晴晴 — Apple Watch 的 HRV 压力监测',
   nav=['功能','常见问题','支持','隐私','条款'],
   badge='Clairsy 晴晴 · Apple Watch 的 HRV 压力监测',
-  h1='压力，<br>像<em>天气</em>一样看得见', sub='用 Apple Watch 读懂你的压力，只和你自己比',
+  h1='压力，<br>像<em>天气</em>一样看得见', sub='读你的 Apple Watch，只和你自己比。压力与今日元气，表盘跟着刷新。',
   lead='Clairsy 读取 Apple Watch 记录的心率变异性（HRV）和心率，和你自己的基线比较，告诉你此刻状态——真巴适、hold住、有点烦还是鸭梨大。晴晴的表情会跟着你变。所有计算都在你的 iPhone 和 Apple Watch 上完成。',
-  dl1='在 App Store', dl2='下载', free='免费开始 · 订阅含 7 天免费试用',
+  dl1='在 App Store', dl2='下载', free='免费就能看此刻压力和元气百分比。',
   req='需要 iOS 18 或更高版本的 iPhone，并配对 Apple Watch（watchOS 11 或更高版本）。',
   shotnote='截图来自当前版本（演示数据）。',
   trust=[('仅在设备上计算','没有服务器，什么都不上传'),('无需账号','不用注册，不用登录'),('不追踪','无广告，无统计分析 SDK'),('只读健康数据','Clairsy 从不写入「健康」')],
   fk='功能', fh='围绕你自己的基线',
-  cards=[('压力，用大白话说','HRV 和静息心率与你的个人基线比较，换算成四档：真巴适、hold住、有点烦、鸭梨大，并给出压力指数和 7 日均值。随手打卡此刻感受，帮它校准到你的真实体感。'),
-         ('今日元气与睡眠','每天早上，Clairsy 根据恢复、睡眠和训练负荷定下今日元气，再显示一天里压力怎样消耗它。睡眠时长、得分、睡眠负债和分期一目了然。'),
-         ('呼吸减压','共振呼吸（吸 4 呼 6）、循环叹息、4-7-8 呼吸和方块呼吸，晴晴陪你一起呼吸——iPhone 和 Apple Watch 都能用。缓一下前后的读数变化一看便知。'),
-         ('戴在手腕上','手表 App 显示此刻状态，一键「立即测量」；表盘复杂功能、主屏幕小组件，以及可选的本地压力提醒。')],
+  cards=[('压力一眼看懂','HRV 和静息心率与你的个人基线比较，一眼看出四档：真巴适、hold住、有点烦、鸭梨大，并给出压力指数和 7 日均值。随手打卡此刻感受，帮它校准到你的真实体感。'),
+         ('今日元气会耗尽','每天早上，Clairsy 根据恢复、睡眠和训练负荷定下今日元气；一天里压力会慢慢耗尽它。睡眠时长、得分、睡眠负债和分期一目了然。'),
+         ('缓一口气','共振呼吸（吸 4 呼 6）、循环叹息、4-7-8 呼吸和方块呼吸，晴晴陪你一起呼吸——iPhone 和 Apple Watch 都能用。缓一下前后的读数变化一看便知。'),
+         ('表盘跟着变','表盘和复杂功能显示此刻状态，一键「立即测量」；还有主屏幕小组件，以及可选的本地压力提醒。')],
   mh='免费开始，想要更多再开会员',
   mb='免费：今日页——压力档位、HRV 和今日元气百分比——以及睡眠时长、得分、睡眠负债和分期、呼吸减压、主屏幕小组件、免费复杂功能和一款基础表盘。Clairsy 会员解锁趋势、元气详情、深度睡眠分析、自定义压力提醒频率，以及全部复杂功能和表盘。可选按月或按年订阅（符合条件的 Apple ID 享 7 天免费试用），或终身买断（一次性购买）。所有购买均由 Apple 处理，价格以 App Store 购买页显示为准。',
   sk='支持', sh='常见问题',
@@ -194,15 +194,21 @@ def home(lang):
 # ---------- v5 Apple-style layout (approved mockup v3) ----------
 X={'en':dict(
   dark_h='Compared only to <span>you</span>.',
-  dark_p='Clairsy compares your HRV (SDNN, plus RMSSD on OS versions that support it) and resting heart rate with your own personal baseline — not a population average — to estimate your current stress level.',
-  stats=[('4',' levels','Chill · Steady · Tense · Stressed'),('7','-day average','alongside the stress index'),('0',' servers','everything is calculated on your iPhone and Apple Watch')],
+  dark_p='',
+  points=[('Your baseline only','Recovery HRV and resting HR vs your personal baseline; check-ins fine-tune it.'),
+          ('Live on your wrist','Watch face and complications refresh when a new sample lands.'),
+          ('Never leaves your device','No servers, no account, no tracking.'),
+          ('Qingqing stays on your wrist','Learning you day by day, your most faithful health companion. When stress rises, a soft nudge to take a breather.')],
   priv_h='Private by design.',
   priv_p='Clairsy only reads the Health data you allow it to read, and does all of its calculations on your iPhone and Apple Watch. We have no servers. We never upload your data to us or to anyone else, and we never use it for advertising.',
   priv_link='Read the Privacy Policy ›', breath_alt='Breathing exercise'),
  'zh':dict(
   dark_h='只和<span>你自己</span>比。',
-  dark_p='Clairsy 把你的 HRV（SDNN，在支持的系统版本上还会用 RMSSD）和静息心率与你自己的个人基线——而不是人群平均值——比较，估算你此刻的压力水平。',
-  stats=[('4',' 档','真巴适 · hold住 · 有点烦 · 鸭梨大'),('7',' 日均值','和压力指数一起看'),('0',' 台服务器','所有计算都在你的 iPhone 和 Apple Watch 上完成')],
+  dark_p='',
+  points=[('只和自己比','恢复 HRV 与静息心率对照你的个人基线；打卡后还会微调。'),
+          ('表盘跟着刷新','新样本一到，表盘和复杂功能跟着更新。'),
+          ('数据不出机','无服务器、无账号、无追踪。'),
+          ('晴晴一直在你手腕上','慢慢读懂你，做最了解你、最忠实的健康伙伴。压力来了，轻轻喊你缓一口气。')],
   priv_h='隐私，从设计开始。',
   priv_p='Clairsy 只读取你授权的「健康」数据，所有计算都在你的 iPhone 和 Apple Watch 上完成。我们没有服务器，不会把你的任何数据上传给我们或任何第三方，也不会把数据用于广告。',
   priv_link='阅读隐私政策 ›', breath_alt='呼吸减压')}
@@ -219,7 +225,8 @@ def home(lang):
     frames=''.join(f'<div class="frame{" on" if k==0 else ""}" data-frame="{k}">{s}</div>' for k,s in enumerate(shots))
     dots=''.join(f'<i class="{"on" if k==0 else ""}"></i>' for k in range(4))
     tiles=''.join(f'<div class="tile reveal"><img class="ti" src="{{A}}icons/{i}.svg" alt="" aria-hidden="true"><b>{a}</b><small>{b}</small></div>' for i,(a,b) in zip(TRUSTI,t['trust']))
-    stats=''.join(f'<div class="stat reveal"><p class="sk"><b>{n}</b><span>{u}</span></p><small>{d}</small></div>' for n,u,d in x['stats'])
+    stats=''.join(f'<div class="stat reveal"><b>{t_}</b><small>{d}</small></div>' for t_,d in x['points'])
+    dark_lede=(f'<p class="lede reveal">{x["dark_p"]}</p>' if x.get('dark_p') else '')
     faq=''.join(f'<details{" open" if k<3 else ""}><summary><span class="ib sm">{icon(i)}</span><span class="q">{q}</span><span class="pm" aria-hidden="true"></span></summary><div class="ans"><div><p>{a}</p></div></div></details>' for k,(i,(q,a)) in enumerate(zip(FAQI,t['faq'])))
     body=f'''<main>
 <section class="hero">{CLOUDS}<div class="wrap hin">
@@ -234,7 +241,7 @@ def home(lang):
 <p class="shotnote">{t['shotnote']}</p></section>
 <section id="features" class="feat"><div class="wrap"><p class="kick reveal">{t['fk']}</p><h2 class="reveal">{t['fh']}</h2></div>
 <div class="wrap sgrid"><div class="steps">{steps}</div><div class="sticky"><div class="devbox">{frames}</div><div class="dots" aria-hidden="true">{dots}</div></div></div></section>
-<section class="dark"><div class="wrap"><h2 class="reveal">{x['dark_h']}</h2><p class="lede reveal">{x['dark_p']}</p><div class="stats">{stats}</div></div></section>
+<section class="dark"><div class="wrap"><h2 class="reveal">{x['dark_h']}</h2>{dark_lede}<div class="stats">{stats}</div></div></section>
 <section id="privacy" class="priv"><div class="wrap"><img class="shield reveal" src="{{A}}icons/in-short-shield.svg" alt="" width="56" height="56"><h2 class="reveal">{x['priv_h']}</h2><p class="lede reveal">{x['priv_p']}</p>
 <div class="tiles">{tiles}</div><p class="plink reveal"><a href="privacy/">{x['priv_link']}</a></p></div></section>
 <section class="mem"><div class="wrap"><div class="mcard reveal"><div><span class="mpill">{icon('membership','ic xs')}{L['member']}</span><h3>{t['mh']}</h3></div><p>{t['mb']}</p></div></div></section>
