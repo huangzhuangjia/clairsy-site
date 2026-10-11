@@ -12,5 +12,6 @@
   "reply_time_en": "within 15 business days",
   "reply_time_zh": "15 个工作日内",
   "app_store_url": "https://apps.apple.com/",
-  "year": "2026"
+  "year": "2026",
+  "policy_major_version": 1
 }

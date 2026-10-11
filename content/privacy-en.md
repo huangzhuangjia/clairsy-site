@@ -46,9 +46,11 @@ The App also reads the **source device information** attached to these samples (
 
 **Why sensitive data is necessary, and how it affects you:** health data is sensitive personal information. The App's core features (stress level, Daily Energy, sleep analysis) can't work without it. All processing happens locally on your devices, and we cannot see or obtain this data.
 
+**How we obtain separate consent:** when you first open the App, we ask you to agree to this Policy. At the "Connect Health" step of onboarding you then tap that button and switch on each data type in Apple's Health permission sheet; this is your **separate consent** to reading the Health data above (sensitive personal information). If you decline this Policy, you can still explore the App in Browse mode, and the App reads no Health data.
+
 ### 2.2 Information you create in the App (stored on your device only)
 
-- **Mood check-ins** (the feeling you choose and the time): used to calibrate stress estimates to how you actually feel.
+- **Mood check-ins** (the feeling you choose and the time): used to calibrate stress estimates to how you actually feel. Because mood records reflect your wellbeing, we treat them as **sensitive personal information**; they stay on your device.
 - **Breathing session history** (time and duration of your most recent 100 sessions): used to show your practice history and before/after changes.
 - **App settings**: appearance, stress-alert frequency, sleep-need duration, and similar preferences.
 - **Computed results and caches**: stress level, Daily Energy, a 30-day HRV sample cache, your personal baselines, and so on. These make the App load faster and feed the Home Screen widgets and watch complications.
@@ -84,9 +86,17 @@ The App contains links to external websites (for example, doi.org links to the r
 
 - **Access and correction:** all of your data is shown in the App, and you can view and manage the underlying health data in Apple's Health app.
 - **Withdraw permission:** at any time, turn off access to any data type in Settings › Privacy & Security › Health › Clairsy, and turn off notifications in Settings › Notifications › Clairsy. Withdrawing permission does not affect processing that already happened while permission was granted.
+- **Withdraw consent to this Policy:** in the App, go to Settings › About › Withdraw Privacy Consent. The App immediately stops reading Health data, clears the on-device results computed from it, and switches to Browse mode. Your mood check-ins and breathing history stay on your device (deleting the App removes them). You can agree again in the same place.
+- **Copy / portability:** your raw Health data can be exported from Apple's Health app; everything the App records stays on your device and is visible in the App.
+- **Explanation:** you may email us to ask us to explain this Policy or how the App processes personal information.
+- **Next of kin:** if a user has passed away, their next of kin may contact us at the email in Section 1 to exercise the rights provided by law.
 - **Deletion:** **delete the App** from your iPhone (and Apple Watch) to erase all of its locally stored data. Copies in system backups follow your backup settings. The App never writes to Health, so deleting it does not affect your Health data.
 - **Account:** there is no account to close. Manage or cancel subscriptions in Settings › [your name] › Subscriptions.
 - **Other requests:** for questions, complaints, or to exercise any other legal right, email us at the address in Section 1. Because we hold none of your data, you can usually handle these requests yourself on your device, as described above.
+
+### Complaints
+
+Send complaints or reports to [Contact Email]; we will reply within **15 business days** after verifying your request. If you are not satisfied, you may complain to the competent authority (in mainland China, the cyberspace, industry and information technology, or market regulation authorities; elsewhere, your local data protection authority) or bring a claim before a competent court.
 
 ## 6. Automated assessment
 
@@ -96,13 +106,45 @@ On your device, the App **automatically** compares your HRV, heart rate, and oth
 
 The App provides **wellness estimates** based on wearable data. It is **not a medical device** and does not diagnose, treat, or prevent any condition. If you feel unwell, please consult a doctor.
 
-## 8. Children
+## 8. Minors and children
 
-The App is not directed to children under **13** (in the United States) or under **14** (in mainland China). If you are a minor, please use the App with the guidance and consent of a parent or guardian. We do not knowingly obtain personal information from children, and the App does not send any data to us. Parents or guardians with questions can email us at the address in Section 1.
+- The App is designed for adults and is **not directed to children under 14** (under 13 in the United States).
+- If you are under 14, use the App only **after a parent or guardian has read and agreed to this Policy**, and under their guidance; the guardian's agreement is the separate consent to processing the child's Health data. If you are 14 to 17, we recommend reading this Policy with a guardian.
+- Data never leaves the device, so we cannot know a user's age and do not knowingly collect children's personal information. A guardian can turn off Health access in iOS Settings or delete the App at any time to erase all App data.
+- Guardians who believe a child's information may be involved can contact us at the email in Section 1.
 
 ## 9. Changes to this policy
 
-When we update this policy, we will publish the new version in the App and change the "Last updated" date above. If an update involves a material change in purposes, methods, or data types (for example, adding cloud sync in the future), we will tell you **prominently** (such as with an in-app prompt) after you update the App, and ask for your consent again where required.
+When we update this policy, we will publish the new version in the App and change the "Last updated" date above. If an update involves a material change in purposes, methods, or data types (for example, adding cloud sync in the future), we will tell you **prominently** (such as with an in-app prompt) after you update the App, and ask for your consent again where required. For a **major version** change (new data types, purposes, third parties, or cloud sync), we will show the key changes the next time you open the App and ask for your consent again; if you decline, you can keep using Browse mode.
+
+## Appendix 1: Personal information inventory
+
+| Feature | Data | Sensitive | Source | Stored | Retention | Leaves device |
+|---|---|---|---|---|---|---|
+| Stress level | HRV (SDNN / RMSSD), resting heart rate, heart rate | Yes | Health (read-only) | On device | HRV cache 30 days; others until you delete the App | No |
+| Daily Energy | Sleep analysis, respiratory rate, sleeping wrist temperature, workouts and effort, steps, active energy | Yes | Health (read-only) | On device | Until you delete the App | No |
+| Sleep analysis | Sleep stages and duration, overnight heart rate | Yes | Health (read-only) | On device | Until you delete the App | No |
+| Data source display | Source device model | No | Health sample metadata | On device | Until you delete the App | No |
+| Personal calibration | Mood check-ins (feeling, time) | Yes | You enter it | On device | Until you delete the App | No |
+| Breathing | Session time and duration | No | Created in the App | On device | Last 100 sessions | No |
+| Membership | Product ID, expiry date, refund status | No | Apple StoreKit | On device | Until you delete the App | No |
+| Watch sync | The results and check-ins above | As above | Created in the App | Your iPhone and Apple Watch | As above | Only between your own devices |
+
+## Appendix 2: System permissions
+
+| Permission | Purpose | When we ask | If you decline | How to turn off |
+|---|---|---|---|---|
+| Health (read) | See Appendix 1 | After you agree to this Policy, when you tap "Connect Health" in onboarding | Related readings show "not enough data" | Settings › Privacy & Security › Health › Clairsy |
+| Notifications | Local stress alerts | When you tap "Turn on stress alerts" in onboarding, or in Settings | No alerts | Settings › Notifications › Clairsy |
+
+The App **does not request** location, camera, microphone, contacts, photos, Bluetooth, or ad-tracking (ATT) permission.
+
+## Appendix 3: Third parties and SDKs
+
+- **Third-party SDKs:** none. The App contains no analytics, advertising, crash-reporting, sign-in, payment, or push SDKs.
+- **Providing personal information to third parties:** none.
+- **Apple Inc.** (an independent handler of personal information, not our processor): when you buy a membership through the App Store, Apple handles payment, billing, renewals, and refunds under its own privacy policy; we never receive your Apple ID or payment details. Health, iCloud Backup, and WatchConnectivity are Apple system services managed by Apple and your device. See the [Apple Privacy Policy](https://www.apple.com/legal/privacy/).
+- **External links** (such as doi.org) open in your system browser; no personal information is passed.
 
 ---
 

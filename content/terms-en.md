@@ -8,11 +8,13 @@
 
 *Sections in bold are especially important to your rights. Please read them carefully.*
 
-Welcome to Clairsy (the "App"). The App is provided by an individual developer, **[Developer Name]** ("we" or "us"). By downloading, installing, or using the App, you confirm that you have read and agree to these Terms and our [Privacy Policy](./privacy-en.md). If you do not agree, please do not use the App.
+Welcome to Clairsy (the "App"). The App is provided by an individual developer, **[Developer Name]** ("we" or "us"). By tapping "Agree & Continue" when you first open the App, you confirm that you have read and agree to these Terms and our [Privacy Policy](./privacy-en.md). If you do not agree, you can explore the App in Browse mode, but features that need Health data are unavailable.
 
 These Terms supplement Apple's [Licensed Application End User License Agreement](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/) (the "Apple Standard EULA"). If the two conflict, these Terms control to the extent permitted by law, except for provisions of the Apple Standard EULA concerning Apple's rights.
 
 ---
+
+> **Auto-renewal notice:** Clairsy monthly and yearly memberships are **auto-renewable subscriptions**. Payment is charged to your Apple ID when you confirm the purchase. **Within 24 hours before the current period ends**, your account is charged for the next period at the then-current price (reference: US $4.99/month, $29.99/year; see the App Store for local prices). To stop renewing, turn off auto-renew in iPhone Settings › [your name] › Subscriptions **at least 24 hours before** the current period ends. Free trials convert to paid subscriptions automatically. Lifetime does not renew. See Section 4.
 
 ## 1. The service
 
@@ -40,6 +42,8 @@ The App reads the Apple Health data you authorize (such as heart rate variabilit
 - **Payment:** payment is charged to your Apple ID account when you confirm the purchase, or when the free trial ends if your plan includes one.
 - **Auto-renewal:** **your subscription renews automatically at the end of each period unless you turn off auto-renew at least 24 hours before the current period ends.** Your account is charged for renewal within 24 hours before the current period ends, at the then-current price. Apple will notify you in advance of any price change, according to its policies.
 - **Manage or cancel:** at any time, in Settings › [your name] › Subscriptions on your iPhone, or in the App under Settings › Membership › Manage Subscription. After you cancel, you keep membership features until the end of the period you have already paid for.
+- **Renewal reminders:** Apple notifies you before a free trial converts to paid or a renewal price increases, according to its policies. We will not change your billing period or price without your knowledge.
+- **No pre-selection:** the App never pre-selects an auto-renewing product; every purchase is confirmed by you on Apple's payment sheet.
 - **Refunds:** Apple handles all payments and refunds; we cannot issue refunds directly. To request one, visit [reportaproblem.apple.com](https://reportaproblem.apple.com) or contact Apple Support.
 
 ## 5. Lifetime (one-time purchase)
@@ -51,6 +55,8 @@ The App reads the Apple Health data you authorize (such as heart rate variabilit
 ## 6. Acceptable use
 
 You agree to use the App only for lawful, personal, non-commercial purposes. You will not reverse engineer, crack, tamper with, or bypass the App's payment mechanisms, and you will not use the App for any unlawful activity.
+
+**Minors:** users under 14 should use the App only with a parent or guardian's consent and guidance, and minors need a guardian's consent to buy a membership. Guardians can request refunds from Apple at [reportaproblem.apple.com](https://reportaproblem.apple.com) or restrict purchases with Screen Time.
 
 ## 7. Intellectual property
 
