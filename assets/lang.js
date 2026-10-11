@@ -42,7 +42,7 @@ document.querySelectorAll('.faq details').forEach(function(d){var s=d.querySelec
  if(d.open){d.classList.add('closing');setTimeout(function(){d.open=false;d.classList.remove('closing')},300)}else{d.classList.add('opening');d.open=true;requestAnimationFrame(function(){requestAnimationFrame(function(){d.classList.remove('opening')})})}})});
 // nav hairline + parallax
 var px=document.querySelectorAll('[data-px]'),ticking=false;
-function onScroll(){var y=window.scrollY;if(top)top.classList.toggle('scrolled',y>8);
+function onScroll(){var y=window.scrollY;if(top)top.classList.toggle('scrolled',y>56);
  if(!reduce&&window.innerWidth>820){px.forEach(function(e){var f=+e.dataset.px,r=e.classList.contains('p1')?Math.min(4,y/120):0;e.style.transform='translateY('+(y*f).toFixed(1)+'px)'+(e.classList.contains('p1')?' rotate('+(-7+r).toFixed(2)+'deg)':'')});
   if(featSec&&devbox){var fr=featSec.getBoundingClientRect(),vh=window.innerHeight,span=fr.height-vh;if(span>0){var p=Math.min(1,Math.max(0,-fr.top/span));devbox.style.transform='translateY('+((p-.5)*28).toFixed(1)+'px)'}else devbox.style.transform=''}}
  else if(devbox)devbox.style.transform='';
