@@ -19,3 +19,6 @@ Unresolved values render highlighted (yellow).
 
 App Store badges: official Apple artwork (unmodified) from https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/{en-us,zh-cn}, stored as assets/badge-en-us.svg / badge-zh-cn.svg, shown 48px high (44px on mobile) with ≥12px clear space. The link target is still the placeholder app_store_url — replace it in site.config.json once the app is live.
 Hero images `assets/vigor.webp`, `today-{en,zh}.webp`, `watch.webp` (Figma v4, section 360:2) were captured from the current master build (DEBUG `-heroDemo relaxed` / `-watchDemo relaxed`).
+
+## Caching
+`build.py` appends `?v=<sha256 prefix>` of each file to every local CSS/JS/image/icon URL, so a deploy serves fresh assets without a hard refresh. GitHub Pages still caches HTML for ~10 minutes (`Cache-Control: max-age=600`), so page text can take up to ~10 min to update after a push.

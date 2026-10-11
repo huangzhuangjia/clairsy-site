@@ -199,3 +199,14 @@ for lang in ('en','zh'):
         p=R/f'{lang}/{alias}/index.html'; p.parent.mkdir(parents=True,exist_ok=True)
         p.write_text(f'<!doctype html><meta charset="utf-8"><title>Clairsy Support</title><meta http-equiv="refresh" content="0;url=../#support"><link rel="canonical" href="../#support"><a href="../#support">Support</a>','utf-8')
 print('built')
+
+# ---------- cache busting: ?v=<content hash> on every local asset URL ----------
+import hashlib
+def _bust(m):
+    url=m.group(2); f=(R/'assets'/url.split('assets/',1)[1])
+    v=hashlib.sha256(f.read_bytes()).hexdigest()[:10] if f.is_file() else None
+    return f'{m.group(1)}{url}?v={v}"' if v else m.group(0)
+for f in list(R.glob('*/index.html'))+list(R.glob('*/*/index.html'))+[R/'index.html']:
+    s=f.read_text('utf-8'); n=re.sub(r'((?:src|href)=")((?:\.\./)+assets/[^"?#]+)"',_bust,s)
+    if n!=s: f.write_text(n,'utf-8')
+print('cache-busted')
