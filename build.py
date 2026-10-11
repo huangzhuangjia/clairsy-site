@@ -208,7 +208,7 @@ X={'en':dict(
           ('Never leaves your device','No servers, no account, no tracking.'),
           ('On your wrist','Check-ins help it learn you; a soft nudge when stress rises.')],
   meet_h='Meet Qingqing',
-  meet_p='Qingqing is the little companion on your wrist. When your stress level changes, so does its expression. When you take a breather, it breathes with you. After check-ins, it learns you a little better. Not a coach — a companion.',
+  meet_p='Qingqing lives on your wrist. It smiles when you’re at ease and frowns when stress creeps in. Each morning it tells you how much energy you’ve got, and when you’re running low it nudges you to wrap up early. When you need a breather, it breathes with you; with every check-in, it quietly learns your rhythm. Whenever you need it most, it’s there — quietly caring, always by your side.',
   moods=[('chill','Great'),('steady','Normal'),('tense','Elevated'),('stressed','Overload')],
   priv_h='Private by design.',
   priv_p='Clairsy only reads the Health data you allow it to read, and does all of its calculations on your iPhone and Apple Watch. We have no servers. We never upload your data to us or to anyone else, and we never use it for advertising.',
@@ -221,7 +221,7 @@ X={'en':dict(
           ('数据不出机','无服务器、无账号、无追踪。'),
           ('晴晴在你手腕上','打卡后更懂你，压力大时轻轻喊你缓一口气。')],
   meet_h='认识晴晴',
-  meet_p='晴晴是你手腕上的小伙伴。压力档位变了，它的表情跟着变；缓一口气时，它陪你一起呼吸；打卡之后，它会慢慢更懂你。不是监督，是陪伴。',
+  meet_p='晴晴是住在你手腕上的小伙伴。你轻松时它眯眼笑，压力一上来它也跟着皱眉。早上它会告诉你今天的元气还剩多少，累了就提醒你早点收工。想缓一缓时，它陪你一呼一吸；每一次打卡，它都悄悄记下，慢慢读懂你的节奏。它总能在你最需要的时候，默默关心你，陪伴你！',
   moods=[('chill','真巴适'),('steady','hold住'),('tense','有点烦'),('stressed','鸭梨大')],
   priv_h='隐私，从设计开始。',
   priv_p='Clairsy 只读取你授权的「健康」数据，所有计算都在你的 iPhone 和 Apple Watch 上完成。我们没有服务器，不会把你的任何数据上传给我们或任何第三方，也不会把数据用于广告。',
@@ -270,12 +270,12 @@ def home(lang):
 <div class="dev p2" data-px="0"><img src="{{A}}today-{lang}.webp" alt="Clairsy Today" width="603" height="1311"></div>
 <div class="dev wt" data-px="0.08"><img src="{{A}}watch{sfx}.webp" alt="Clairsy on Apple Watch" width="416" height="496"></div>
 <img class="mas" src="{{A}}qingqing.svg" alt="" width="135" height="135"></div></div></div></section>
-<section id="features" class="feat"><div class="wrap sgrid"><div class="steps"><div class="rail" aria-hidden="true"><i></i></div>{steps}</div><div class="sticky"><div class="devbox">{frames}</div><div class="dots" aria-hidden="true">{dots}</div></div></div></section>
 <section id="qingqing" class="meet"><div class="wrap"><div class="meetcard reveal">
 <div class="meetvis"><div class="meet-stage" aria-hidden="true">{meet_faces}</div>
 <div class="moods" role="group" aria-label="{x['meet_h']}">{moods}</div></div>
 <div class="meettxt"><h2>{x['meet_h']}</h2><p>{x['meet_p']}</p></div>
 </div></div></section>
+<section id="features" class="feat"><div class="wrap sgrid"><div class="steps"><div class="rail" aria-hidden="true"><i></i></div>{steps}</div><div class="sticky"><div class="devbox">{frames}</div><div class="dots" aria-hidden="true">{dots}</div></div></div></section>
 <section id="privacy" class="priv"><div class="wrap"><img class="shield reveal" src="{{A}}icons/in-short-shield.svg" alt="" width="56" height="56"><h2 class="reveal">{x['priv_h']}</h2><p class="lede reveal">{x['priv_p']}</p>
 <div class="tiles">{tiles}</div><p class="plink reveal"><a href="privacy/">{x['priv_link']}</a></p></div></section>
 <section class="mem"><div class="wrap"><div class="memhead reveal"><span class="mpill">{icon('membership','ic xs')}{L['member']}</span><h2>{t['mh']}</h2></div>
