@@ -1,0 +1,16 @@
+{
+  "_comment": "ALL placeholders live here. Edit, then run: python3 build.py",
+  "developer_name": "[Developer Name]",
+  "developer_name_zh": "[开发者姓名]",
+  "support_email": "support@example.com",
+  "effective_date_en": "[Effective date]",
+  "effective_date_zh": "[生效日期]",
+  "last_updated_en": "[Last updated date]",
+  "last_updated_zh": "[更新日期]",
+  "court_en": "[the developer's place of residence, e.g. City, Province]",
+  "court_zh": "[开发者住所地，例如 XX 省 XX 市]",
+  "reply_time_en": "within 3 business days",
+  "reply_time_zh": "3 个工作日内",
+  "app_store_url": "https://apps.apple.com/",
+  "year": "2026"
+}
