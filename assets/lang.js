@@ -13,7 +13,11 @@ if(!io||reduce){rv.forEach(function(e){e.classList.add('in')})}else{
  rv.forEach(function(e){ro.observe(e)})}
 // sticky feature steps
 var steps=document.querySelectorAll('.step'),frames=document.querySelectorAll('.frame'),dots=document.querySelectorAll('.dots i');
-function act(k){steps.forEach(function(s,i){s.classList.toggle('on',i==k)});frames.forEach(function(f,i){f.classList.toggle('on',i==k)});dots.forEach(function(d,i){d.classList.toggle('on',i==k)})}
+var featSec=document.getElementById('features'),devbox=document.querySelector('.devbox'),curStep=0;
+function act(k){if(k===curStep&&steps[k]&&steps[k].classList.contains('on'))return;curStep=k;
+ steps.forEach(function(s,i){s.classList.toggle('on',i===k)});
+ frames.forEach(function(f,i){f.classList.toggle('on',i===k)});
+ dots.forEach(function(d,i){d.classList.toggle('on',i===k);d.classList.toggle('past',i<k)})}
 if(steps.length){if(io){var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)act(+e.target.dataset.step)})},{rootMargin:'-45% 0px -45% 0px'});steps.forEach(function(s){so.observe(s)})}else act(0)}
 // FAQ slide
 document.querySelectorAll('.faq details').forEach(function(d){var s=d.querySelector('summary');s.addEventListener('click',function(ev){if(reduce)return;ev.preventDefault();
@@ -21,7 +25,9 @@ document.querySelectorAll('.faq details').forEach(function(d){var s=d.querySelec
 // nav hairline + parallax
 var px=document.querySelectorAll('[data-px]'),ticking=false;
 function onScroll(){var y=window.scrollY;if(top)top.classList.toggle('scrolled',y>8);
- if(!reduce&&window.innerWidth>820){px.forEach(function(e){var f=+e.dataset.px,r=e.classList.contains('p1')?Math.min(4,y/120):0;e.style.transform='translateY('+(y*f).toFixed(1)+'px)'+(e.classList.contains('p1')?' rotate('+(-7+r).toFixed(2)+'deg)':'')})}
+ if(!reduce&&window.innerWidth>820){px.forEach(function(e){var f=+e.dataset.px,r=e.classList.contains('p1')?Math.min(4,y/120):0;e.style.transform='translateY('+(y*f).toFixed(1)+'px)'+(e.classList.contains('p1')?' rotate('+(-7+r).toFixed(2)+'deg)':'')});
+  if(featSec&&devbox){var fr=featSec.getBoundingClientRect(),vh=window.innerHeight,span=fr.height-vh;if(span>0){var p=Math.min(1,Math.max(0,-fr.top/span));devbox.style.transform='translateY('+((p-.5)*28).toFixed(1)+'px)'}else devbox.style.transform=''}}
+ else if(devbox)devbox.style.transform='';
  ticking=false}
 window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(onScroll)}},{passive:true});onScroll();
 
