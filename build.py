@@ -25,7 +25,9 @@ T = {
   trust=[('On-device only','No servers — nothing is uploaded'),('No account','No sign-up, no login'),('No tracking','No ads, no analytics SDKs'),('Read-only Health','Clairsy never writes to Health')],
   fk='FEATURES', fh='Built around your own baseline',
   cards=[('Stress, plain and clear','HRV and resting heart rate become four clear levels — Chill, Steady, Tense, Stressed — with a stress index and 7-day average. Quick mood check-ins calibrate it to how you actually feel.'),
-         ('Daily Vigor drains','Each morning Clairsy sets your Daily Vigor from recovery, sleep and training load — then stress drains it through the day. Sleep duration, score, sleep debt and stages at a glance.'),
+         ('Daily Vigor drains','Each morning Clairsy sets your Daily Vigor from recovery, sleep and training load — then stress drains it through the day, so you can see how much you have left.'),
+         ('Sleep at a glance','Last night’s duration, sleep score, 7-night sleep debt and stages — deep, core, REM and awake — all free, with Qingqing suggesting a bedtime. Membership adds in-depth sleep analysis.'),
+         ('Trends you can see','Day, week and month views of your HRV against your baseline, a breakdown of time spent Chill, Steady, Tense and Stressed, and a stress heat map that shows when you tend to tense up. Trends are part of Clairsy Membership.'),
          ('Breathe it down','Resonance breathing (4 in, 6 out), cyclic sighing, 4-7-8 and box breathing, with Qingqing breathing along — on iPhone and Apple Watch. Before-and-after readings show what changed.'),
          ('Your watch face keeps up','Watch face and complications show your current level, with a one-tap “Measure now”, Home Screen widgets, and optional local stress alerts.')],
   mh='Free to start, membership when you want more',
@@ -58,7 +60,9 @@ T = {
   trust=[('仅在设备上计算','没有服务器，什么都不上传'),('无需账号','不用注册，不用登录'),('不追踪','无广告，无统计分析 SDK'),('只读健康数据','Clairsy 从不写入「健康」')],
   fk='功能', fh='围绕你自己的基线',
   cards=[('压力一眼看懂','HRV 和静息心率与你的个人基线比较，一眼看出四档：真巴适、hold住、有点烦、鸭梨大，并给出压力指数和 7 日均值。随手打卡此刻感受，帮它校准到你的真实体感。'),
-         ('今日元气会耗尽','每天早上，Clairsy 根据恢复、睡眠和训练负荷定下今日元气；一天里压力会慢慢耗尽它。睡眠时长、得分、睡眠负债和分期一目了然。'),
+         ('今日元气会耗尽','每天早上，Clairsy 根据恢复、睡眠和训练负荷定下今日元气；一天里压力会慢慢耗尽它，还剩多少一眼就知道。'),
+         ('睡眠一眼看懂','昨夜睡眠时长、睡眠得分、近 7 晚睡眠负债，以及深睡、浅睡、REM、清醒分期，全部免费；晴晴还会建议今晚几点前睡。会员解锁深度睡眠分析。'),
+         ('趋势看得见','按日、周、月查看 HRV 与个人基线的对比、真巴适 / hold住 / 有点烦 / 鸭梨大各占多少时间，还有压力热力图，看清自己一般几点最紧绷。趋势为 Clairsy 会员功能。'),
          ('缓一口气','共振呼吸（吸 4 呼 6）、循环叹息、4-7-8 呼吸和方块呼吸，晴晴陪你一起呼吸——iPhone 和 Apple Watch 都能用。缓一下前后的读数变化一看便知。'),
          ('表盘跟着变','表盘和复杂功能显示此刻状态，一键「立即测量」；还有主屏幕小组件，以及可选的本地压力提醒。')],
   mh='免费开始，想要更多再开会员',
@@ -144,7 +148,7 @@ WEATHER='<svg class="wx" viewBox="0 0 64 44" aria-hidden="true"><circle cx="40" 
 LABELS={'en':dict(member='MEMBERSHIP',menu='Menu'),'zh':dict(member='会员',menu='菜单')}
 FAQI=['watch','hrv','refresh','upload-off','restore','cancel-subscription','refund','delete-data']
 TRUSTI=['on-device','no-account','no-tracking','read-only-health']
-CARDI=['stress-weather','vigor-sleep','breathe','watch']
+CARDI=['stress-weather','vigor-sleep','vigor-sleep','hrv','breathe','watch']
 
 def page(lang, kind, body, title):
     t=T[lang]; up='../' if kind!='home' else ''
@@ -204,7 +208,7 @@ X={'en':dict(
   moods=[('chill','Chill'),('steady','Steady'),('tense','Tense'),('stressed','Stressed')],
   priv_h='Private by design.',
   priv_p='Clairsy only reads the Health data you allow it to read, and does all of its calculations on your iPhone and Apple Watch. We have no servers. We never upload your data to us or to anyone else, and we never use it for advertising.',
-  priv_link='Read the Privacy Policy ›', breath_alt='Breathing exercise'),
+  priv_link='Read the Privacy Policy ›', breath_alt='Breathing exercise', sleep_alt='Sleep', trends_alt='Trends'),
  'zh':dict(
   dark_h='只和<span>你自己</span>比。',
   dark_p='',
@@ -217,18 +221,20 @@ X={'en':dict(
   moods=[('chill','真巴适'),('steady','hold住'),('tense','有点烦'),('stressed','鸭梨大')],
   priv_h='隐私，从设计开始。',
   priv_p='Clairsy 只读取你授权的「健康」数据，所有计算都在你的 iPhone 和 Apple Watch 上完成。我们没有服务器，不会把你的任何数据上传给我们或任何第三方，也不会把数据用于广告。',
-  priv_link='阅读隐私政策 ›', breath_alt='呼吸减压')}
+  priv_link='阅读隐私政策 ›', breath_alt='呼吸减压', sleep_alt='睡眠', trends_alt='趋势')}
 CLOUDS='<div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div>'
 
 def home(lang):
     t=T[lang]; x=X[lang]; L=LABELS[lang]; zh=lang=='zh'; sfx='' if zh else '-en'
     shots=[f'<div class="ph"><img src="{{A}}today-{lang}.webp" alt="Clairsy Today" width="603" height="1311" loading="lazy"></div>',
            f'<div class="ph"><img src="{{A}}vigor{sfx}.webp" alt="Daily Vigor" width="603" height="1311" loading="lazy"></div>',
+           f'<div class="ph"><img src="{{A}}sleep-{lang}.webp" alt="{x["sleep_alt"]}" width="603" height="1311" loading="lazy"></div>',
+           f'<div class="ph"><img src="{{A}}trends-{lang}.webp" alt="{x["trends_alt"]}" width="603" height="1311" loading="lazy"></div>',
            f'<div class="ph"><img src="{{A}}breath-{lang}.webp" alt="{x["breath_alt"]}" width="603" height="1311" loading="lazy"></div>',
            f'<div class="wa"><img src="{{A}}watch{sfx}.webp" alt="Clairsy on Apple Watch" width="416" height="496" loading="lazy"></div>']
     steps=''.join(f'<div class="step reveal" data-step="{k}"><span class="n">0{k+1}</span><h3>{a}</h3><p>{b}</p><div class="inl">{shots[k]}</div></div>' for k,(a,b) in enumerate(t['cards']))
     frames=''.join(f'<div class="frame{" on" if k==0 else ""}" data-frame="{k}">{s}</div>' for k,s in enumerate(shots))
-    dots=''.join(f'<i class="{"on" if k==0 else ""}"></i>' for k in range(4))
+    dots=''.join(f'<i class="{"on" if k==0 else ""}"></i>' for k in range(len(shots)))
     tiles=''.join(f'<div class="tile reveal"><img class="ti" src="{{A}}icons/{i}.svg" alt="" aria-hidden="true"><b>{a}</b><small>{b}</small></div>' for i,(a,b) in zip(TRUSTI,t['trust']))
     stats=''.join(f'<div class="stat reveal"><b>{t_}</b><small>{d}</small></div>' for t_,d in x['points'])
     dark_lede=(f'<p class="lede reveal">{x["dark_p"]}</p>' if x.get('dark_p') else '')
